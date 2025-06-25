@@ -18,6 +18,7 @@ function runKu(filePath) {
 
     try {
       validateHaiku(haiku, i);
+      interpretHaiku(haiku);
       console.log(`✅ Valid haiku:\n${haiku.join('\n')}\n`);
     } catch (err) {
       console.error(err.message + '\n');
@@ -41,6 +42,23 @@ function validateHaiku(haiku, index) {
         `❌ Invalid haiku at lines ${index + 1}-${index + 3}: Line ${i + 1} has ${actual} syllables (expected ${expected[i]})`
       );
     }
+  }
+}
+
+const memory = {};
+
+function interpretHaiku(haiku) {
+  const [line1, line2, line3] = haiku;
+
+  const varMatch = line1.match(/the (.+?) remembers/);
+  if (!varMatch) return;
+
+  const varName = varMatch[1].trim();
+  const value = countSyllables(line2);
+  memory[varName] = value;
+
+  if (line3.toLowerCase().includes('echo')) {
+    console.log(`${varName}: ${memory[varName]}`);
   }
 }
 
