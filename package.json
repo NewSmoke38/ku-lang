@@ -1,0 +1,27 @@
+{
+  "name": "ku-lang",
+  "version": "1.0.0",
+  "description": "An esolang with syntax like haikus!!!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "run": "node interpreter/ku.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NewSmoke38/ku-lang.git"
+  },
+  "keywords": [
+    "Haiku"
+  ],
+  "author": "Shivani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NewSmoke38/ku-lang/issues"
+  },
+  "homepage": "https://github.com/NewSmoke38/ku-lang#readme",
+  "dependencies": {
+    "syllable": "^5.0.1"
+  }
+}
