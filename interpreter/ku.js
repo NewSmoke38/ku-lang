@@ -8,13 +8,63 @@ import { syllable } from 'syllable';
  */
 
 function runKu(filePath) {
-  // Read the contents of the file at filePath as a UTF-8 string,
-  const lines = fs.readFileSync(filePath, 'utf8').trim().split('\n');
+  const rawLines = fs.readFileSync(filePath, 'utf8').split('\n');
 
-  // Loop through every 3 lines at a time — each 3 lines is one haiku.
-  for (let i = 0; i < lines.length; i += 3) {
-    const haiku = lines.slice(i, i + 3); // Extract the 3-line block
+  const blocks = rawLines.reduce((acc, line) => {
+    const trimmed = line.trim();
+    if (trimmed === '') {
+      if (acc.current.length === 3) acc.haikus.push(acc.current);
+      acc.current = [];
+    } else {
+      acc.current.push(trimmed);
+    }
+    return acc;
+  }, { haikus: [], current: [] });
+
+  if (blocks.current.length === 3) {
+    blocks.haikus.push(blocks.current);
+  }
+
+  const haikus = blocks.haikus;
+
+  let skipNext = false;
+
+  for (let i = 0; i < haikus.length; i++) {
+    const haiku = haikus[i];
     if (haiku.length < 3) continue;
+
+    if (skipNext) {
+      skipNext = false;
+      continue;
+    }
+
+    const conditionMatch = haiku[0].match(/if (.+?) is greater/);
+    if (conditionMatch) {
+      const varName = conditionMatch[1].trim();
+      const nextHaiku = haikus[i + 1];
+      if (!nextHaiku || nextHaiku.length < 3) {
+        console.error(`❌ No haiku to evaluate after condition at lines ${i * 3 + 1}-${i * 3 + 3}`);
+        continue;
+      }
+
+      const compareLine = nextHaiku[1]; // Line 2 of the next haiku
+      const compareWords = compareLine.toLowerCase().split(' ');
+      const compareTo = numberWords[compareWords[1]] || 0;
+
+      if (memory[varName] > compareTo) {
+        if (nextHaiku.length === 3) {
+          try {
+            validateHaiku(nextHaiku, i + 1);
+            interpretHaiku(nextHaiku);
+            console.log(`✅ Valid haiku:\n${nextHaiku.join('\n')}\n`);
+          } catch (err) {
+            console.error(err.message + '\n');
+          }
+        }
+      }
+      skipNext = true;
+      continue;
+    }
 
     try {
       validateHaiku(haiku, i);
