@@ -47,6 +47,24 @@ function validateHaiku(haiku, index) {
 
 const memory = {};
 
+const numberWords = {
+  one: 1, two: 2, three: 3, four: 4, five: 5,
+  six: 6, seven: 7, eight: 8, nine: 9, ten: 10
+};
+
+function parseExpression(line) {
+  const words = line.toLowerCase().split(' ');
+
+  const first = numberWords[words[0]] || 0;
+  const operator = words[2]; // 'plus' or 'minus'
+  const second = numberWords[words[3]] || 0;
+
+  if (operator === 'plus') return first + second;
+  if (operator === 'minus') return first - second;
+
+  return first;
+}
+
 function interpretHaiku(haiku) {
   const [line1, line2, line3] = haiku;
 
@@ -54,7 +72,7 @@ function interpretHaiku(haiku) {
   if (!varMatch) return;
 
   const varName = varMatch[1].trim();
-  const value = countSyllables(line2);
+  const value = parseExpression(line2);
   memory[varName] = value;
 
   if (line3.toLowerCase().includes('echo')) {
