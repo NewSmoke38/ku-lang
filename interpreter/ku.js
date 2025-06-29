@@ -28,6 +28,7 @@ function runKu(filePath) {
   const haikus = blocks.haikus;
 
   let skipNext = false;
+  let skipCurrent = false;
 
   for (let i = 0; i < haikus.length; i++) {
     const haiku = haikus[i];
@@ -35,6 +36,51 @@ function runKu(filePath) {
 
     if (skipNext) {
       skipNext = false;
+      continue;
+    }
+
+    if (skipCurrent) {
+      skipCurrent = false;
+      continue;
+    }
+
+    const summonMatch = haiku[0].match(/^summon (.+)$/);
+    if (summonMatch) {
+      const funcName = summonMatch[1].trim().toLowerCase();
+      try {
+        const expected = [5, 7, 5];
+        for (let j = 0; j < 3; j++) {
+          const actual = countSyllables(haiku[j]);
+          if (actual !== expected[j]) {
+            throw new Error(`❌ Invalid haiku for function '${funcName}': Line ${j + 1} has ${actual} syllables (expected ${expected[j]})`);
+          }
+        }
+        functions[funcName] = haiku;
+        console.log(`🔮 Summoned function '${funcName}'`);
+      } catch (err) {
+        console.error(err.message + '\n');
+      }
+      continue;
+    }
+
+    const callMatch = haiku[0].match(/call the (.+?)( now)?$/);
+    if (callMatch) {
+      const funcName = callMatch[1].trim().toLowerCase();
+      const summoned = functions[funcName];
+      if (summoned) {
+        try {
+          // Execute the summoned function
+          interpretHaiku(summoned);
+          console.log(`🌀 Called function '${funcName}'`);
+          
+          // Display fused haiku
+          displayFusedHaiku(summoned, haiku);
+        } catch (err) {
+          console.error(`❌ Error in function '${funcName}': ${err.message}\n`);
+        }
+      } else {
+        console.error(`❌ Function '${funcName}' not found`);
+      }
       continue;
     }
 
@@ -97,6 +143,8 @@ function validateHaiku(haiku, index) {
 
 const memory = {};
 
+const functions = {};
+
 const numberWords = {
   one: 1, two: 2, three: 3, four: 4, five: 5,
   six: 6, seven: 7, eight: 8, nine: 9, ten: 10
@@ -119,7 +167,9 @@ function interpretHaiku(haiku) {
   const [line1, line2, line3] = haiku;
 
   const varMatch = line1.match(/the (.+?) remembers/);
-  if (!varMatch) return;
+  if (!varMatch) {
+    return;
+  }
 
   const varName = varMatch[1].trim();
   const value = parseExpression(line2);
@@ -128,6 +178,56 @@ function interpretHaiku(haiku) {
   if (line3.toLowerCase().includes('echo')) {
     console.log(`${varName}: ${memory[varName]}`);
   }
+}
+
+// Simplified haiku fusion function
+function fuseHaikus(summonedHaiku, callingHaiku) {
+  // Take line 1 from summoned, line 2 from calling, line 3 from summoned
+  const line1 = summonedHaiku[1]; // Second line from summoned (more poetic)
+  const line2 = callingHaiku[1];  // Second line from calling (more poetic)
+  const line3 = summonedHaiku[2]; // Third line from summoned (more poetic)
+  
+  return [line1, line2, line3];
+}
+
+function displayFusedHaiku(summonedHaiku, callingHaiku) {
+  const fusedHaiku = fuseHaikus(summonedHaiku, callingHaiku);
+  console.log(`\n✨ Fused Haiku:`);
+  console.log(fusedHaiku.join('\n'));
+  console.log('');
+}
+
+// ASCII art for functions
+const functionArt = {
+  'darkened crow': [
+    '    ___    ',
+    '   (o o)   ',
+    '  (  V  )  ',
+    ' /--m-m--\\ ',
+    '   |   |   '
+  ],
+  'default': [
+    '   ___   ',
+    '  (^_^)  ',
+    '  /   \\  '
+  ]
+};
+
+function getArtForFunction(funcName) {
+  // Try to find specific art for the function
+  for (const [key, art] of Object.entries(functionArt)) {
+    if (funcName.includes(key) || key.includes(funcName)) {
+      return art;
+    }
+  }
+  return functionArt.default;
+}
+
+function displayFunctionArt(funcName) {
+  const art = getArtForFunction(funcName);
+  console.log(`\n🎨 ${funcName.toUpperCase()}:`);
+  console.log(art.join('\n'));
+  console.log('');
 }
 
 // Get the file path from the command-line arguments.
