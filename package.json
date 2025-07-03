@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/NewSmoke38/ku-lang#readme",
   "dependencies": {
+    "rhyme-plus": "^0.0.7",
     "syllable": "^5.0.1"
   },
   "devDependencies": {
