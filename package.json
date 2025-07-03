@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/NewSmoke38/ku-lang#readme",
   "dependencies": {
+    "dictionary-en": "^4.0.0",
     "rhyme-plus": "^0.0.7",
-    "syllable": "^5.0.1"
+    "syllable": "^5.0.1",
+    "word-list": "^4.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
