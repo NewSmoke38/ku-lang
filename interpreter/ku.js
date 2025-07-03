@@ -25,17 +25,15 @@ function runKu(filePath) {
 
   for (let i = 0; i < haikus.length; i++) {     
     const haiku = haikus[i];
-    if (haiku.length < 3) continue;    // skip a haiku which doesnt have 3 lines
+    if (haiku.length < 3) continue;
 
     if (skipNext) {
       skipNext = false;
       continue;
     }
 
-    // Check if this haiku defines a function (starts with "summon")
     const summonMatch = haiku[0].match(/^summon (.+)$/);
     if (summonMatch) {
-      // Extract function name 
       const funcName = summonMatch[1].trim().toLowerCase();
       try {
         const expected = [5, 7, 5];
@@ -45,7 +43,6 @@ function runKu(filePath) {
             throw new Error(`❌ Invalid haiku for function '${funcName}': Line ${j + 1} has ${actual} syllables (expected ${expected[j]})`);
           }
         }
-        // Store the function in our functions object
         functions[funcName] = haiku;
         console.log(`🔮 Summoned function '${funcName}'`);
       } catch (err) {
@@ -54,19 +51,14 @@ function runKu(filePath) {
       continue;
     }
 
-    // Check if this haiku calls a function (starts with "call the")
     const callMatch = haiku[0].match(/call the (.+?)( now)?$/);
     if (callMatch) {
-      // Extract function name and convert to lowercase
       const funcName = callMatch[1].trim().toLowerCase();
-      // Look up the function in our stored functions
       const summoned = functions[funcName];
       if (summoned) {
         try {
-          // Execute the summoned function
           interpretHaiku(summoned);
           console.log(`🌀 Called function '${funcName}'`);
-          // Display the fused haiku (combination of summoned and calling haiku)
           displayFusedHaiku(summoned, haiku);
         } catch (err) {
           console.error(`❌ Error in function '${funcName}': ${err.message}\n`);
@@ -77,27 +69,19 @@ function runKu(filePath) {
       continue;
     }
 
-
-    // Check if this haiku is a conditional statement (starts with "if")
     const conditionMatch = haiku[0].match(/if (.+?) is greater/);
     if (conditionMatch) {
-      // Extract variable name from condition
       const varName = conditionMatch[1].trim();
-      // Get the next haiku (the one to execute if condition is true)
       const nextHaiku = haikus[i + 1];
-      // Check if next haiku exists and has 3 lines
       if (!nextHaiku || nextHaiku.length < 3) {
         console.error(`❌ No haiku to evaluate after condition at lines ${i * 3 + 1}-${i * 3 + 3}`);
         continue;
       }
 
-      // Get the second line of next haiku (contains comparison value)
       const compareLine = nextHaiku[1];
-      // Split line into words and get the number to compare against
       const compareWords = compareLine.toLowerCase().split(' ');
       const compareTo = numberWords[compareWords[1]] || 0;
 
-      // If variable value is greater than comparison value, execute next haiku
       if (memory[varName] > compareTo) {
         try {
           validateHaiku(nextHaiku, i + 1);
@@ -111,7 +95,6 @@ function runKu(filePath) {
       continue;
     }
 
-    // If haiku doesn't match any special patterns, treat it as a regular haiku
     try {
       validateHaiku(haiku, i);
       interpretHaiku(haiku);
@@ -122,12 +105,10 @@ function runKu(filePath) {
   }
 }
 
-// Function to count syllables 
 function countSyllables(line) {
   return syllable(line);
 }
 
-// Function to validate that a haiku follows the 5-7-5 syllable pattern
 function validateHaiku(haiku, index) {
   const expected = [5, 7, 5];
   for (let i = 0; i < 3; i++) {
@@ -141,7 +122,6 @@ function validateHaiku(haiku, index) {
   }
 }
 
-// storing stuff
 const memory = {};
 const functions = {};
 
@@ -175,7 +155,6 @@ function interpretHaiku(haiku) {
   }
 }
 
-// fused haiku
 function fuseHaikus(summonedHaiku, callingHaiku) {
   const line1 = summonedHaiku[1];
   const line2 = callingHaiku[1];
@@ -189,7 +168,6 @@ function displayFusedHaiku(summonedHaiku, callingHaiku) {
   console.log(fusedHaiku.join('\n'));
   console.log('');
 }
-
 
 const file = process.argv[2];
 
