@@ -75,22 +75,21 @@
         <rect width="1440" height="96" fill="url(#pixelHill)"/>
       </svg>
     </div>
-    <div class="w-full flex justify-center mt-2 mb-2 z-10">
-      <span class="text-xs text-gray-700">desktop</span>
-    </div>
+
           <main class="flex-1 flex flex-col items-center px-4 pb-16 bg-white mx-auto max-w-4xl rounded-lg shadow-lg z-10 relative mt-[-32px]" style="margin-top: 0;">
         <nav class="w-full flex justify-between items-center py-6 text-xs text-gray-700">
           <div class="font-bold">dino.lab</div>
           <div class="flex gap-6">
             <a href="#" class="hover:underline">our services</a>
-            <a href="#" class="hover:underline">who we are</a>
+            <a href="#" id="about-link" class="hover:underline">about</a>
             <a href="#" class="hover:underline">services for</a>
-            <a href="#" class="hover:underline">team</a>
+            <a href="#" id="error-gallery-link" class="hover:underline">Error Gallery</a>
             <a href="#" class="hover:underline">contacts</a>
           </div>
         </nav>
-      <section class="w-full flex flex-col items-center mt-8 mb-8">
-        <h1 class="pixel-font text-5xl md:text-7xl text-black text-center leading-tight mb-8">WHAT'S<br><span class="text-3xl md:text-5xl">A HAIKU?</span></h1>
+      <div id="main-content">
+        <section class="w-full flex flex-col items-center mt-8 mb-8">
+          <h1 class="pixel-font text-5xl md:text-7xl text-black text-center leading-tight mb-8">WHAT'S<br><span class="text-3xl md:text-5xl">A HAIKU?</span></h1>
         <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-base text-gray-800 max-w-xl text-left shadow-md mt-4 mb-2 whitespace-pre-line">
   <span class="font-bold text-lg text-pink-500">ha·ku</span>  |  'hīˌko͞o  |
   <span class="text-gray-600">noun <i>(plural haiku or plural haikus | 'hīˌko͞oz |)</i></span>
@@ -613,7 +612,207 @@
           </div>
         </div>
       </section>
-    </main>
+
+        </div>
+        
+        <div id="error-gallery-content" class="hidden">
+          <section class="w-full flex flex-col items-center mt-8 mb-16">
+        <h2 class="pixel-font text-4xl md:text-5xl text-black text-center leading-tight mb-8">ERROR<br><span class="text-2xl md:text-3xl">GALLERY</span></h2>
+        <p class="text-lg text-gray-700 max-w-2xl text-center leading-relaxed mb-12">
+          A collection of poetic failures, where haikus break free from their 5-7-5 chains. Each error tells a story of syntax gone astray.
+        </p>
+
+        <div class="w-full max-w-5xl mx-auto space-y-12">
+          <div class="bg-red-50 border-l-8 border-red-400 p-8 rounded-lg">
+            <h3 class="pixel-font text-xl md:text-2xl text-red-600 mb-6">Syllable Symphony Gone Wrong</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-red-500 font-bold mb-2">-_- : Line 1 has 6 syllables (expected 5)</div>
+                <blockquote class="bg-red-50 border-l-4 border-red-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  the beautiful moon remembers<br>five plus two in the night<br>echo moon bright
+                </blockquote>
+                <p class="text-sm text-gray-600 italic">
+                  Solution: Use a shorter word like "bright" or "soft" instead of "beautiful"
+                </p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-red-500 font-bold mb-2">-_- : Line 2 has 8 syllables (expected 7)</div>
+                <blockquote class="bg-red-50 border-l-4 border-red-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  the moon remembers<br>five plus two plus three plus four<br>echo softly now
+                </blockquote>
+                <p class="text-sm text-gray-600 italic">
+                  Solution: Use fewer numbers or combine them into a single expression
+      </p>
+      </div>
+      </div>
+     </div>
+
+          <div class="bg-orange-50 border-l-8 border-orange-400 p-8 rounded-lg">
+            <h3 class="pixel-font text-xl md:text-2xl text-orange-600 mb-6">Words That Don't Belong</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+           <div class="bg-white p-6 rounded-lg shadow-md">
+             <div class="text-orange-500 font-bold mb-2">'supercalifragilistic' is not a valid English word!!</div>
+                <blockquote class="bg-orange-50 border-l-4 border-orange-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  
+                  the supercalifragilistic remembers<br>five plus two<br>echo magic
+                </blockquote>
+                <p class="text-sm text-gray-600 italic">
+                  Solution: Use a valid English word from the dictionary
+                </p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-orange-500 font-bold mb-2">'xyzzy' is not a valid English word!!</div>
+                <blockquote class="bg-orange-50 border-l-4 border-orange-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  the xyzzy remembers<br>five plus two<br>echo portal
+                </blockquote>
+                <p class="text-sm text-gray-600 italic">
+                  Solution: Use a real English word instead of made-up terms
+             </p>
+          </div>
+          </div>
+          </div>
+
+          <div class="bg-purple-50 border-l-8 border-purple-400 p-8 rounded-lg">
+            <h3 class="pixel-font text-xl md:text-2xl text-purple-600 mb-6">Palindrome Puzzles</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-purple-500 font-bold mb-2">'racecar' is not a valid English word palindrome</div>
+                <blockquote class="bg-purple-50 border-l-4 border-purple-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  the moon remembers<br>racecar speeds through night<br>echo softly now
+                </blockquote>
+                <p class="text-sm text-gray-600 italic">
+                  Solution: Use a valid English palindrome word like "radar" or "level"
+                </p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-purple-500 font-bold mb-2">'kayak' is not a valid English word palindrome</div>
+                <blockquote class="bg-purple-50 border-l-4 border-purple-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  the sun remembers<br>kayak glides on water<br>echo river now
+                </blockquote>
+                <p class="text-sm text-gray-600 italic">
+                  Solution: Use a recognized English palindrome word
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 border-l-8 border-blue-400 p-8 rounded-lg">
+            <h3 class="pixel-font text-xl md:text-2xl text-blue-600 mb-6">Loop Logic Lost</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-blue-500 font-bold mb-2">+_+ : Invalid loop range</div>
+                <blockquote class="bg-blue-50 border-l-4 border-blue-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  count from five to three<br>words disappear one by one<br>until none remain
+                </blockquote>
+
+                <p class="text-sm text-gray-600 italic">
+
+                  Solution: Count from smaller to larger number (e.g., "count from three to five")
+                </p>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-blue-500 font-bold mb-2">+_+ : Invalid loop range</div>
+                <blockquote class="bg-blue-50 border-l-4 border-blue-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  count from apple to orange<br>words disappear one by one<br>until none remain
+                </blockquote>
+                <p class="text-sm text-gray-600 italic">
+                  Solution: Use number words "one" through "ten" for loop ranges
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="bg-green-50 border-l-8 border-green-400 p-8 rounded-lg">
+            <h3 class="pixel-font text-xl md:text-2xl text-green-600 mb-6">Function Fables</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-green-500 font-bold mb-2">Function 'moonlight' not found</div>
+               
+                <blockquote class="bg-green-50 border-l-4 border-green-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  call the moonlight now<br>
+                  the stars remember<br>
+                  five plus five
+                </blockquote>
+                <p class="text-sm text-gray-600 italic">
+                  Solution: Define the function first using "summon" before calling it
+                </p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-green-500 font-bold mb-2"><?> : No haiku to evaluate after condition</div>
+                <blockquote class="bg-green-50 border-l-4 border-green-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                  if moon is great<br>the stars remember<br>one plus one
+                </blockquote>
+                <p class="text-sm text-gray-600 italic">
+                  Solution: Add a haiku after the condition to specify what happens when true
+             </p>
+           </div>
+        </div>
+          </div>
+
+
+          <div class="text-center">
+            <h3 class="pixel-font text-xl md:text-2xl text-pink-600 mb-6">meow</h3>
+            <div class="flex justify-center">
+              <img src="/assets/cat.jpg" alt="Cat contemplating broken haikus" class="max-w-md rounded-lg shadow-lg" />
+            </div>
+          </div>
+        </div>
+
+      </section>
+        </div>
+        
+        <div id="about-content" class="hidden">
+          <section class="w-full flex flex-col items-center mt-8 mb-16">
+            <h2 class="pixel-font text-4xl md:text-5xl text-black text-center leading-tight mb-8">ABOUT<br><span class="text-2xl md:text-3xl text-pink-500">KU-LANG</span></h2>
+            <p class="text-lg text-gray-700 max-w-2xl text-center leading-relaxed mb-12">
+              Discover the story behind ku-lang, a programming language where poetry meets code.
+            </p>
+
+   <div class="w-full max-w-4xl mx-auto space-y-12">
+              <div class="bg-blue-50 border-l-8 border-blue-400 p-8 rounded-lg">
+                <h3 class="pixel-font text-xl md:text-2xl text-blue-600 mb-6">The Birth of Ku-Lang</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="bg-gray-100 border-l-4 border-blue-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 italic mb-4">
+                    why i made an esolang?
+                  </div>
+                  <p class="text-gray-700 leading-relaxed">
+I didn't start this to change how people think about code or poetry.<br>
+I just saw a good challenge in Hack Club's "You Ship, We Ship," named "Twist" in which we gotta make an esolang to maybe win a keyboard!<br>
+and thought: what if a haiku could run?<br>
+<br>
+also I like building strange, tiny things—like that <a href="https://github.com/NewSmoke38/beasty-the-http-server" class="text-pink-500 hover:underline" target="_blank" rel="noopener">beasty</a> the HTTP server which I hand-wired from scratch.<br>
+Ku-Lang is just another one of those side quests ♨︎.
+                </div>
+              </div>
+
+              <div class="bg-pink-50 border-l-8 border-pink-400 p-8 rounded-lg">
+                <h3 class="pixel-font text-xl md:text-2xl text-pink-600 mb-6">What Makes Ku-Lang Special</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <p class="text-gray-700 text-base">
+                    actually Haikus are not a very new concept for me, i first learned about it in my school english textbook.<br>
+                    i was 15, in class 10th, had a friend with whom i wrote some haikus in the back of a rough notebook maybe, in a free period.<br>
+                    we wrote em all wrong cause we did not know the 5-7-5 rule but we enjoyed writing three lines.<br>
+                    <br>
+                    and from then i know what a Haiku is, <span class="text-pink-500">Ku-Lang</span> is special cause i get some nostalgia from it!!
+                  </p>
+                </div>
+              </div>
+
+
+
+              <div class="text-center">
+                <h3 class="pixel-font text-xl md:text-2xl text-pink-600 mb-6">woof</h3>
+                <div class="flex justify-center">
+                  <img src="/assets/pinkCreature.gif" alt="Pink Creature" class="max-w-md rounded-lg shadow-lg" />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
   </div>
   <script>
     // Feature dropdown functionality
@@ -632,6 +831,51 @@
             btn.textContent = '▼ Show Anatomy';
           }
         });
+      });
+
+      const errorGalleryLink = document.getElementById('error-gallery-link');
+      const aboutLink = document.getElementById('about-link');
+      const mainContent = document.getElementById('main-content');
+      const errorGalleryContent = document.getElementById('error-gallery-content');
+      const aboutContent = document.getElementById('about-content');
+
+      errorGalleryLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        if (mainContent.classList.contains('hidden')) {
+          mainContent.classList.remove('hidden');
+          errorGalleryContent.classList.add('hidden');
+          aboutContent.classList.add('hidden');
+          errorGalleryLink.textContent = 'Error Gallery';
+          aboutLink.textContent = 'about';
+        } 
+        
+        
+        else {
+          mainContent.classList.add('hidden');
+          errorGalleryContent.classList.remove('hidden');
+          aboutContent.classList.add('hidden');
+          errorGalleryLink.textContent = 'Back to Haiku';
+          aboutLink.textContent = 'about';
+        }
+      });
+
+      aboutLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        if (mainContent.classList.contains('hidden')) {
+          mainContent.classList.remove('hidden');
+          aboutContent.classList.add('hidden');
+          errorGalleryContent.classList.add('hidden');
+          aboutLink.textContent = 'about';
+          errorGalleryLink.textContent = 'Error Gallery';
+        } else {
+          mainContent.classList.add('hidden');
+          aboutContent.classList.remove('hidden');
+          errorGalleryContent.classList.add('hidden');
+          aboutLink.textContent = 'Back to Haiku';
+          errorGalleryLink.textContent = 'Error Gallery';
+        }
       });
     });
   </script>
