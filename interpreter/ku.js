@@ -316,10 +316,10 @@ export function runKu(filePath) {
 
 // Keep the CLI execution at the bottom
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const file = process.argv[2];
-  if (!file) {
-    console.error('Usage: node interpreter/ku.js <path-to-ku-file>');
-    process.exit(1);
-  }
-  runKu(path.resolve(file));
+const file = process.argv[2];
+if (!file) {
+  console.error('Usage: node interpreter/ku.js <path-to-ku-file>');
+  process.exit(1);
+}
+runKu(path.resolve(file));
 }

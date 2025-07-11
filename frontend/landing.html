@@ -78,17 +78,17 @@
 
           <main class="flex-1 flex flex-col items-center px-4 pb-16 bg-white mx-auto max-w-4xl rounded-lg shadow-lg z-10 relative mt-[-32px]" style="margin-top: 0;">
         <nav class="w-full flex justify-between items-center py-6 text-xs text-gray-700">
-          <div class="font-bold">dino.lab</div>
+          <div class="font-bold">Ku.Lang</div>
           <div class="flex gap-6">
-            <a href="#" class="hover:underline">our services</a>
+            <a href="#" id="haiku-link" class="hover:underline">haiku</a>
             <a href="#" id="about-link" class="hover:underline">about</a>
             <a href="#" class="hover:underline">services for</a>
             <a href="#" id="error-gallery-link" class="hover:underline">Error Gallery</a>
-            <a href="#" class="hover:underline">contacts</a>
+            <a href="#" id="contact-link" class="hover:underline">contact</a>
           </div>
         </nav>
       <div id="main-content">
-        <section class="w-full flex flex-col items-center mt-8 mb-8">
+      <section class="w-full flex flex-col items-center mt-8 mb-8">
           <h1 class="pixel-font text-5xl md:text-7xl text-black text-center leading-tight mb-8">WHAT'S<br><span class="text-3xl md:text-5xl">A HAIKU?</span></h1>
         <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-base text-gray-800 max-w-xl text-left shadow-md mt-4 mb-2 whitespace-pre-line">
   <span class="font-bold text-lg text-pink-500">ha·ku</span>  |  'hīˌko͞o  |
@@ -773,7 +773,7 @@
 
    <div class="w-full max-w-4xl mx-auto space-y-12">
               <div class="bg-blue-50 border-l-8 border-blue-400 p-8 rounded-lg">
-                <h3 class="pixel-font text-xl md:text-2xl text-blue-600 mb-6">The Birth of Ku-Lang</h3>
+                <h3 class="pixel-font text-xl md:text-2xl text-blue-600 mb-6 text-center">The Birth of Ku-Lang</h3>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                   <div class="bg-gray-100 border-l-4 border-blue-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 italic mb-4">
                     why i made an esolang?
@@ -789,7 +789,7 @@ Ku-Lang is just another one of those side quests ♨︎.
               </div>
 
               <div class="bg-pink-50 border-l-8 border-pink-400 p-8 rounded-lg">
-                <h3 class="pixel-font text-xl md:text-2xl text-pink-600 mb-6">What Makes Ku-Lang Special</h3>
+                <h3 class="pixel-font text-xl md:text-2xl text-pink-600 mb-6 text-center">What Makes Ku-Lang Special</h3>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                   <p class="text-gray-700 text-base">
                     actually Haikus are not a very new concept for me, i first learned about it in my school english textbook.<br>
@@ -803,6 +803,29 @@ Ku-Lang is just another one of those side quests ♨︎.
 
 
 
+              <div class="bg-gray-50 border-l-8 border-gray-400 p-8 rounded-lg text-center">
+                <h3 class="pixel-font text-xl md:text-2xl text-gray-600 mb-6">LICENSE & COPYRIGHT</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="mb-6">
+                    <h4 class="font-bold text-lg text-gray-700 mb-4">MIT License</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                      Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed mt-4">
+                      The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                    </p>
+                  </div>
+                  <div class="border-t border-gray-200 pt-6">
+                    <p class="text-gray-700">
+                      <span class="font-bold">Copyright © 2024</span> chxshi
+                    </p>
+                    <p class="text-gray-600 text-sm mt-2">
+                      Made with <span class="text-pink-500">♡</span> for poets and programmers
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div class="text-center">
                 <h3 class="pixel-font text-xl md:text-2xl text-pink-600 mb-6">woof</h3>
                 <div class="flex justify-center">
@@ -812,7 +835,96 @@ Ku-Lang is just another one of those side quests ♨︎.
             </div>
           </section>
         </div>
-      </main>
+        
+        <div id="haiku-content" class="hidden">
+          <section class="w-full flex flex-col items-center mt-8 mb-16">
+            <h2 class="pixel-font text-4xl md:text-5xl text-black text-center leading-tight mb-8">HAIKU<br><span class="text-2xl md:text-3xl text-pink-500">GALLERY</span></h2>
+            <p class="text-lg text-gray-700 max-w-2xl text-center leading-relaxed mb-12">
+              A collection of beautiful haiku programs written in ku-lang. Each one tells a story in 5-7-5 syllables.
+            </p>
+
+            <div class="w-full max-w-4xl mx-auto space-y-12">
+              <div class="bg-pink-50 border-l-8 border-pink-400 p-8 rounded-lg">
+                <h3 class="pixel-font text-xl md:text-2xl text-pink-600 mb-6 text-center">Sample Haiku Programs</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                  <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-lg text-pink-600 mb-4">Variables</h4>
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                      the moon remembers<br>five plus two in the night<br>echo moon bright
+                    </blockquote>
+                    <p class="text-gray-600 text-sm">
+                      Stores the value 7 in variable "moon" and outputs it.
+                    </p>
+                  </div>
+                  <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-bold text-lg text-pink-600 mb-4">Functions</h4>
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
+                      summon the sun now<br>the light remembers<br>three plus four
+                    </blockquote>
+                    <p class="text-gray-600 text-sm">
+                      Defines function "sun" and calls it to output 7.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 border-l-8 border-blue-400 p-8 rounded-lg text-center">
+                <h3 class="pixel-font text-xl md:text-2xl text-blue-600 mb-6">Write Your Own Haiku</h3>
+                <p class="text-lg text-gray-700 mb-6">
+                  Try writing your own ku-lang haiku program!
+                </p>
+                <div class="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+                  <textarea class="w-full h-32 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent mb-4" placeholder="Write your haiku here...&#10;Remember: 5-7-5 syllables!"></textarea>
+                  <button class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded-full transition">
+                    Run Haiku
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        <div id="contact-content" class="hidden">
+          <section class="w-full flex flex-col items-center mt-8 mb-16">
+            <h2 class="pixel-font text-4xl md:text-5xl text-black text-center leading-tight mb-8">SEND A<br><span class="text-2xl md:text-3xl text-pink-500">MEOW</span></h2>
+            <p class="text-lg text-gray-700 max-w-2xl text-center leading-relaxed mb-12">
+              Have questions about ku-lang? Want to share your haiku programs? or just wanna chat about it?!
+            </p>
+
+            <div class="w-full max-w-4xl mx-auto space-y-12">
+              <div class="bg-pink-50 border-l-8 border-pink-400 p-8 rounded-lg">
+                <h3 class="pixel-font text-xl md:text-2xl text-pink-600 mb-6">SOCIALS</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                      <a href="mailto:shivanialive2007@gmail.com" class="inline-block bg-pink-100 hover:bg-pink-200 text-pink-600 border border-pink-300 rounded-full px-4 py-2 text-sm font-bold transition">
+                        EMAIL
+                      </a>
+                    </div>
+                    <div class="text-center">
+                      <a href="https://github.com/NewSmoke38" class="inline-block bg-pink-100 hover:bg-pink-200 text-pink-600 border border-pink-300 rounded-full px-4 py-2 text-sm font-bold transition" target="_blank">
+                        GITHUB
+                      </a>
+                    </div>
+                    <div class="text-center">
+                      <a href="https://hackclub.slack.com/team/U077C11T3A8" class="inline-block bg-pink-100 hover:bg-pink-200 text-pink-600 border border-pink-300 rounded-full px-4 py-2 text-sm font-bold transition" target="_blank">
+                        SLACK
+                      </a>
+                    </div>
+                    <div class="text-center">
+                      <a href="https://x.com/Newsmoke38" class="inline-block bg-pink-100 hover:bg-pink-200 text-pink-600 border border-pink-300 rounded-full px-4 py-2 text-sm font-bold transition" target="_blank">
+                        TWITTER
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </section>
+        </div>
+    </main>
   </div>
   <script>
     // Feature dropdown functionality
@@ -833,49 +945,47 @@ Ku-Lang is just another one of those side quests ♨︎.
         });
       });
 
+      // Page toggle functionality
+      const haikuLink = document.getElementById('haiku-link');
       const errorGalleryLink = document.getElementById('error-gallery-link');
       const aboutLink = document.getElementById('about-link');
+      const contactLink = document.getElementById('contact-link');
       const mainContent = document.getElementById('main-content');
+      const haikuContent = document.getElementById('haiku-content');
       const errorGalleryContent = document.getElementById('error-gallery-content');
       const aboutContent = document.getElementById('about-content');
+      const contactContent = document.getElementById('contact-content');
+
+      function hideAllContent() {
+        mainContent.classList.add('hidden');
+        haikuContent.classList.add('hidden');
+        errorGalleryContent.classList.add('hidden');
+        aboutContent.classList.add('hidden');
+        contactContent.classList.add('hidden');
+      }
+
+      haikuLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideAllContent();
+        mainContent.classList.remove('hidden');
+      });
 
       errorGalleryLink.addEventListener('click', (e) => {
         e.preventDefault();
-        
-        if (mainContent.classList.contains('hidden')) {
-          mainContent.classList.remove('hidden');
-          errorGalleryContent.classList.add('hidden');
-          aboutContent.classList.add('hidden');
-          errorGalleryLink.textContent = 'Error Gallery';
-          aboutLink.textContent = 'about';
-        } 
-        
-        
-        else {
-          mainContent.classList.add('hidden');
-          errorGalleryContent.classList.remove('hidden');
-          aboutContent.classList.add('hidden');
-          errorGalleryLink.textContent = 'Back to Haiku';
-          aboutLink.textContent = 'about';
-        }
+        hideAllContent();
+        errorGalleryContent.classList.remove('hidden');
       });
 
       aboutLink.addEventListener('click', (e) => {
         e.preventDefault();
-        
-        if (mainContent.classList.contains('hidden')) {
-          mainContent.classList.remove('hidden');
-          aboutContent.classList.add('hidden');
-          errorGalleryContent.classList.add('hidden');
-          aboutLink.textContent = 'about';
-          errorGalleryLink.textContent = 'Error Gallery';
-        } else {
-          mainContent.classList.add('hidden');
-          aboutContent.classList.remove('hidden');
-          errorGalleryContent.classList.add('hidden');
-          aboutLink.textContent = 'Back to Haiku';
-          errorGalleryLink.textContent = 'Error Gallery';
-        }
+        hideAllContent();
+        aboutContent.classList.remove('hidden');
+      });
+
+      contactLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideAllContent();
+        contactContent.classList.remove('hidden');
       });
     });
   </script>
