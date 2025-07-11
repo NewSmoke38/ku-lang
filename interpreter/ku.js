@@ -7,16 +7,18 @@ const englishWords = new Set(fs.readFileSync(wordListPath, 'utf8').split('\n'));
 
 function rhymes(a, b) {
   const getRhymeEnding = word => {
-    const clean = word.toLowerCase().trim();
+     const clean = word.toLowerCase().trim();
     const match = clean.match(/[aeiouy]+[^aeiouy]*$/);
+
     return match ? match[0] : clean.slice(-2);
   };
   
+
   const wa = a.trim().toLowerCase().split(/\s+/).pop();
   const wb = b.trim().toLowerCase().split(/\s+/).pop();
   
   return getRhymeEnding(wa) === getRhymeEnding(wb);
-}
+ }
 
 function isPalindrome(str) {
 const clean = str.toLowerCase().replace(/[^a-z]/g, '');
@@ -32,7 +34,7 @@ function hasPalindromeWord(haiku) {
     if (englishWords.has(clean)) {
         return true;
       } else {
-        throw new Error(`❌ '${clean}' is not a valid English word palindrome`);
+        throw new Error(`'${clean}' is not a valid English word palindrome`);
       }
     }
   }
@@ -43,25 +45,42 @@ function hasPalindromeWord(haiku) {
 
 function validateEnglishWords(haiku) {
   const words = haiku.join(' ').toLowerCase().split(/\s+/);
+  
   for (const word of words) {
     const clean = word.replace(/[^a-z]/g, '');
+     
     if (clean.length > 0 && !englishWords.has(clean)) {
-      throw new Error(`❌ '${clean}' is not a valid English word!!`);
+      throw new Error(`'${clean}' is not a valid English word!!`);
     }
+
   }
+
 }
 
+
+
 function runKu(filePath) {
-  const rawLines = fs.readFileSync(filePath, 'utf8').split('\n');
-  const blocks = rawLines.reduce((acc, line) => {          
+   const rawLines = fs.readFileSync(filePath, 'utf8').split('\n');
+
+   const blocks = rawLines.reduce((acc, line) => {        
+
     const trimmed = line.trim();
+
+
+
     if (trimmed === '') {
       if (acc.current.length === 3) acc.haikus.push(acc.current);
       acc.current = [];
-    } else {
-      acc.current.push(trimmed);
+    } 
+    else {
+      const codeOnly = trimmed.split('//')[0].trim();
+      if (codeOnly) {
+        acc.current.push(codeOnly);
+      }
     }
+
     return acc;
+
   }, { haikus: [], current: [] });
   if (blocks.current.length === 3) {
     blocks.haikus.push(blocks.current);
@@ -75,6 +94,47 @@ function runKu(filePath) {
       skipNext = false;
       continue;
     }
+
+
+
+
+
+    
+const loopMatch = haiku[0].match(/^count from (\w+) to (\w+)/);
+
+if (loopMatch) {
+  
+  const from = numberWords[loopMatch[1]];
+
+  const to = numberWords[loopMatch[2]];
+
+  if (from === undefined || to === undefined || to < from) {
+    console.error(`+_+ Invalid loop range: '${haiku[0]}'`); 
+    continue; 
+  }
+
+  let line = haiku[1].trim(); 
+  const words = line.split(/\s+/); 
+  for (let iter = from; iter <= to && words.length > 0; iter++) {
+    
+    const consumedLine = words.join(' ');
+
+    const syllables = countSyllables(consumedLine);
+
+    console.log(`🌀 Iteration ${iter}: "${consumedLine}" (${syllables} syllables)`);
+
+    if (words.length > 2) {
+      words.shift(); 
+      words.pop();   
+    } else if (words.length === 2) {
+      words.pop();   
+    } else {
+      words.length = 0; 
+    }
+  }
+
+  continue;
+}    
     const summonMatch = haiku[0].match(/^summon (.+)$/);
     if (summonMatch) {
       const funcName = summonMatch[1].trim().toLowerCase();
@@ -83,12 +143,12 @@ function runKu(filePath) {
         for (let j = 0; j < 3; j++) {
           const actual = countSyllables(haiku[j]);
           if (actual !== expected[j]) {
-            throw new Error(`❌ Invalid haiku for function '${funcName}': Line ${j + 1} has ${actual} syllables (expected ${expected[j]})`);
+            throw new Error(`Invalid haiku for function '${funcName}': Line ${j + 1} has ${actual} syllables (expected ${expected[j]})`);
           }
         }
         const hasPalindrome = hasPalindromeWord(haiku);
         if (hasPalindrome) {
-          console.log(`🔄 Palindrome detected in summon! Reversing function '${funcName}':`);
+          console.log(` 🧚🏼 Palindrome detected in summon! Reversing function '${funcName}':`);
           const reverseWords = line => line.split(' ').reverse().join(' ');
           console.log(reverseWords(haiku[2]));
           console.log(reverseWords(haiku[1]));
@@ -110,7 +170,7 @@ function runKu(filePath) {
         try {
           const hasPalindrome = hasPalindromeWord(haiku);
           if (hasPalindrome) {
-            console.log(`🔄 Palindrome detected in calling! Reversing call to '${funcName}':`);
+            console.log(`🧚🏼 Palindrome detected in calling! Reversing call to '${funcName}':`);
             const reverseWords = line => line.split(' ').reverse().join(' ');
             console.log(reverseWords(haiku[2]));
             console.log(reverseWords(haiku[1]));
@@ -121,10 +181,10 @@ function runKu(filePath) {
           console.log(`🌀 Called function '${funcName}'`);
           displayFusedHaiku(summoned, haiku);
         } catch (err) {
-          console.error(`❌ Error in function '${funcName}': ${err.message}\n`);
+          console.error(`-__- Error in function '${funcName}': ${err.message}\n`);
         }
       } else {
-        console.error(`❌ Function '${funcName}' not found`);
+        console.error(`Function '${funcName}' not found`);
       }
       continue;
     }
@@ -133,7 +193,7 @@ function runKu(filePath) {
       const varName = conditionMatch[1].trim();
       const nextHaiku = haikus[i + 1];
       if (!nextHaiku || nextHaiku.length < 3) {
-        console.error(`❌ No haiku to evaluate after condition at lines ${i * 3 + 1}-${i * 3 + 3}`);
+        console.error(`<?> No haiku to evaluate after condition at lines ${i * 3 + 1}-${i * 3 + 3}`);
         continue;
       }
       const compareLine = nextHaiku[1];
@@ -160,7 +220,7 @@ function runKu(filePath) {
       validateEnglishWords(haiku);
       validateHaiku(haiku, i);
       if (hasPalindrome) {
-        console.log(`🔄 Palindrome detected! Reversing haiku:`);
+        console.log(`🧚🏼 Palindrome detected! Reversing haiku:`);
         const reverseWords = line => line.split(' ').reverse().join(' ');
         console.log(reverseWords(haiku[2]));
         console.log(reverseWords(haiku[1]));
@@ -185,7 +245,7 @@ function validateHaiku(haiku, index) {
     console.log(`[checking]: ${haiku[i]} (${actual}/${expected[i]})`);
     if (actual !== expected[i]) {
       throw new Error(
-        `❌ Invalid haiku at lines ${index + 1}-${index + 3}: Line ${i + 1} has ${actual} syllables (expected ${expected[i]})`
+        `-_- Invalid haiku at lines ${index + 1}-${index + 3}: Line ${i + 1} has ${actual} syllables (expected ${expected[i]})`
       );
     }
   }
@@ -245,7 +305,7 @@ function displayFusedHaiku(summonedHaiku, callingHaiku) {
   const hasPalindromeCalling = hasPalindromeWord(callingHaiku);
   let outputHaiku = fusedHaiku;
   if (hasPalindromeSummoned || hasPalindromeCalling) {
-    console.log(`🔄 Palindrome detected in fusion! Reversing fused haiku:`);
+    console.log(`🧚🏼 Palindrome detected in fusion! Reversing fused haiku:`);
     const reverseWords = line => line.split(' ').reverse().join(' ');
     outputHaiku = [
       reverseWords(fusedHaiku[2]),

@@ -1,7 +1,7 @@
-summon magic now
-civic flows at dawn today
-birds fly in the sky
+summon add_numbers  // Define a function to add numbers
+five plus three is the result // Calculate 5+3
+echo the sum now // Display the sum
 
-call the magic now
-kayak glides on lake today
-ripples in the blue
+call the add_numbers                   // Call the function we defined
+with some extra parameters             // Pass additional data
+execute the code now                   // Run the function
