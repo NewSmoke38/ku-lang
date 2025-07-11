@@ -1,0 +1,33 @@
+{
+  "files.associations": {
+    "*.ku": "ku"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.control.ku",
+        "settings": {
+          "foreground": "#FF6B9D"
+        }
+      },
+      {
+        "scope": "constant.numeric.ku",
+        "settings": {
+          "foreground": "#4EC9B0"
+        }
+      },
+      {
+        "scope": "keyword.operator.ku",
+        "settings": {
+          "foreground": "#DCDCAA"
+        }
+      },
+      {
+        "scope": "comment.line.ku",
+        "settings": {
+          "foreground": "#6A9955"
+        }
+      }
+    ]
+  }
+} 
