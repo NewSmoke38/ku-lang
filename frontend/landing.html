@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketing Is Our Art</title>
+  <title>What's a Haiku? - Ku-Lang</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
@@ -90,32 +90,104 @@
           </div>
         </nav>
       <section class="w-full flex flex-col items-center mt-8 mb-8">
-        <h1 class="pixel-font text-5xl md:text-7xl text-black text-center leading-tight">MARKETING<br><span class="text-3xl md:text-5xl">IS OUR ART</span></h1>
-        <p class="mt-4 text-xl text-center font-semibold">SUCCESS IS YOUR REALITY</p>
-        <button class="mt-6 bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded-full transition">let's start!</button>
-              </section>
-        <div class="w-full flex flex-col items-center mb-8">
-        <p class="text-xs text-gray-700 text-center max-w-xl">DIGITAL MARKETING & CREATIVE SOLUTIONS.</p>
-      </div>
-      <section class="w-full flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
-        <div class="flex flex-col items-center">
-          <span class="pixel-font text-2xl">20+</span>
-          <span class="text-xs text-gray-700">years of<br>experience</span>
+        <h1 class="pixel-font text-5xl md:text-7xl text-black text-center leading-tight mb-8">WHAT'S<br><span class="text-3xl md:text-5xl">A HAIKU?</span></h1>
+        <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-base text-gray-800 max-w-xl text-left shadow-md mt-4 mb-2 whitespace-pre-line">
+  <span class="font-bold text-lg text-pink-500">ha·ku</span>  |  'hīˌko͞o  |
+  <span class="text-gray-600">noun <i>(plural haiku or plural haikus | 'hīˌko͞oz |)</i></span>
+
+  a Japanese poem of seventeen syllables, in three lines of five, seven, and five, traditionally evoking images of the natural world.
+  • a poem in English written in the form of a haiku.
+
+  <span class="font-bold text-xs text-gray-500 mt-2">ORIGIN</span>
+  <span class="text-xs text-gray-500">Japanese, contracted form of <i>haikai no ku</i> ‘light verse’.</span>
+        </blockquote>
+        <button id="lets-start-btn" class="mt-6 bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded-full transition">Show Me a Haiku</button>
+        <div id="random-haiku-box" class="hidden transition-opacity duration-300 opacity-0 mt-6 w-full flex justify-center">
+          <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-base text-gray-800 max-w-md text-left shadow-md whitespace-pre-line" id="haiku-content">
+          </blockquote>
         </div>
-        <div class="flex flex-col items-center">
-          <span class="pixel-font text-2xl">8 500+</span>
-          <span class="text-xs text-gray-700">completed<br>projects</span>
-        </div>
-        <div class="flex flex-col items-center">
-          <span class="pixel-font text-2xl">12+</span>
-          <span class="text-xs text-gray-700">countries for<br>cooperation</span>
-        </div>
+        <script>
+          const haikus = [
+            `the moon remembers\nfive plus two in the night\necho moon bright`,
+            `summon the sun now\nthe light remembers\nthree plus four`,
+            `if stars are greater\nshine above the silent lake\necho softly now`,
+            `call the river now\nwater flows through gentle stones\nwhisper to the sea`,
+            `value remembers\nfive plus five is the answer\necho value now`
+          ];
+          const btn = document.getElementById('lets-start-btn');
+          const box = document.getElementById('random-haiku-box');
+          const content = document.getElementById('haiku-content');
+          btn.addEventListener('click', (e) => {
+            const random = haikus[Math.floor(Math.random() * haikus.length)];
+            content.textContent = random;
+            box.classList.remove('hidden');
+            setTimeout(() => box.classList.add('opacity-100'), 10);
+            box.classList.remove('opacity-0');
+            e.stopPropagation();
+          });
+          document.addEventListener('click', (e) => {
+            if (!box.classList.contains('hidden')) {
+              if (!box.contains(e.target) && e.target !== btn) {
+                box.classList.remove('opacity-100');
+                box.classList.add('opacity-0');
+                setTimeout(() => box.classList.add('hidden'), 300);
+              }
+            }
+          });
+          box.addEventListener('click', (e) => {
+            e.stopPropagation();
+          });
+        </script>
       </section>
       <section class="w-full flex flex-col items-center mt-8 mb-16">
-        <h2 class="pixel-font text-4xl md:text-6xl text-black text-center mb-4">WHO WE ARE?</h2>
-        <p class="text-xs text-gray-700 text-center max-w-2xl">
-          WOULD YOU LIKE TO INCREASE YOUR BRAND AWARENESS, ATTRACT NEW CUSTOMERS OR IMPROVE CONVERSION? THANKS TO OUR CREATIVE APPROACH, YOUR WEBSITE WILL TURN INTO A REAL DINOSAUR IN THE ONLINE SPACE! IT WILL ATTRACT EYES, CAPTURE HEARTS AND BE REMEMBERED BY EVERY VISITOR. WE UNDERSTAND THAT FIRST IMPRESSIONS ARE EVERYTHING, AND WE ENSURE THAT YOUR WEBSITE NOT ONLY MEETS YOUR NEEDS, BUT ALSO MAKES A LASTING IMPRESSION ON YOUR TARGET AUDIENCE.
-        </p>
+        <h2 class="pixel-font text-5xl md:text-6xl text-black text-center leading-tight mb-8">WHAT'S<br><span class="text-3xl md:text-5xl">A SYLLABLE?</span></h2>
+        <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-base text-gray-800 max-w-xl text-left shadow-md mt-4 mb-2 whitespace-pre-line">
+          <span class="font-bold text-lg text-pink-500">syl·la·ble</span>  |  'sɪləb(ə)l  |<br>
+          <span class="text-gray-800">A syllable is a part of a word that contains a single vowel sound and that is pronounced as a unit.</span>
+
+          <span class="font-bold text-xs text-gray-500 mt-2">ORIGIN</span>
+          <span class="text-xs text-gray-500">Greek <i>syllabē</i> (συλλαβή), meaning "that which is held together" or "a taking together".</span>
+        </blockquote>
+        <button id="syllable-examples-btn" class="mt-6 bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded-full transition">Show Me Examples</button>
+        <div id="syllable-examples-box" class="hidden transition-opacity duration-300 opacity-0 mt-6 w-full flex justify-center">
+          <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-base text-gray-800 max-w-md text-left shadow-md whitespace-pre-line" id="syllable-content">
+          </blockquote>
+        </div>
+        <script>
+          const syllableExamples = [
+            `remember  →  e, e, e  →  3 syllables`,
+            `haiku  →  ai, u  →  2 syllables`,
+            `programming  →  o, a, i  →  3 syllables`,
+            `beautiful  →  eau, i, u  →  3 syllables`,
+            `computer  →  o, u, e  →  3 syllables`,
+            `language  →  a, ua, e  →  3 syllables`,
+            `poetry  →  oe, y  →  2 syllables`,
+            `mountain  →  ou, ai  →  2 syllables`
+          ];
+          const syllableBtn = document.getElementById('syllable-examples-btn');
+          const syllableBox = document.getElementById('syllable-examples-box');
+          const syllableContent = document.getElementById('syllable-content');
+          syllableBtn.addEventListener('click', (e) => {
+            const random = syllableExamples[Math.floor(Math.random() * syllableExamples.length)];
+            syllableContent.textContent = random;
+            syllableBox.classList.remove('hidden');
+            setTimeout(() => syllableBox.classList.add('opacity-100'), 10);
+            syllableBox.classList.remove('opacity-0');
+            e.stopPropagation();
+          });
+          document.addEventListener('click', (e) => {
+            if (!syllableBox.classList.contains('hidden')) {
+              if (!syllableBox.contains(e.target) && e.target !== syllableBtn) {
+                syllableBox.classList.remove('opacity-100');
+                syllableBox.classList.add('opacity-0');
+                setTimeout(() => syllableBox.classList.add('hidden'), 300);
+              }
+            }
+          });
+          syllableBox.addEventListener('click', (e) => {
+            e.stopPropagation();
+          });
+        </script>
       </section>
       <section class="w-full flex flex-col items-center mt-12 mb-8">
         <h2 class="pixel-font text-3xl md:text-4xl text-pink-500 mb-6">how to use ku-lang</h2>
@@ -174,6 +246,33 @@
                     </blockquote>
                   </td>
                   <td class="py-3 align-top">Assignment/echo (default)</td>
+                </tr>
+                <tr class="border-t">
+                  <td class="py-3 align-top font-bold">palindrome</td>
+                  <td class="py-3 align-top pr-6">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-3 pr-2 py-1 rounded font-mono text-xs whitespace-pre-line">
+                      the sun remembers<br>one plus two plus two civic<br>echo civic now
+                    </blockquote>
+                  </td>
+                  <td class="py-3 align-top">Reverses haiku if palindrome word found</td>
+                </tr>
+                <tr class="border-t">
+                  <td class="py-3 align-top font-bold">rhyming</td>
+                  <td class="py-3 align-top pr-6">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-3 pr-2 py-1 rounded font-mono text-xs whitespace-pre-line">
+                      the moon remembers<br>five plus two in the night<br>echo moon bright
+                    </blockquote>
+                  </td>
+                  <td class="py-3 align-top">Doubles variable value if lines rhyme</td>
+                </tr>
+                <tr class="border-t">
+                  <td class="py-3 align-top font-bold">function fusion</td>
+                  <td class="py-3 align-top pr-6">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-3 pr-2 py-1 rounded font-mono text-xs whitespace-pre-line">
+                      summon magic now<br>civic flows at dawn today<br>birds fly in the sky<br><br>call the magic now<br>kayak glides on lake today<br>ripples in the blue
+                    </blockquote>
+                  </td>
+                  <td class="py-3 align-top">Fuses summoned and calling haikus, reverses if palindromes found</td>
                 </tr>
                 <tr class="border-t">
                   <td class="py-3 align-top font-bold">error</td>
