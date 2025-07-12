@@ -20,14 +20,15 @@
 
 
 <p align="center">
-  ```ku
-  Write code in haiku—
-  Three lines, five-seven-five beats,
-  It runs. It responds.
-  ```
+  <div align="center">
+    <code style="text-align: center; display: block;">
+      Write code in haiku—<br>
+      Three lines with five-seven-five beats,<br>
+      It runs and responds.
+    </code>
+  </div>
 </p>
 
----
 
 <div align="center">
 
@@ -46,26 +47,29 @@
 <strong>Error Handling</strong>: Provides descriptive error messages with line numbers<br><br>
 <strong>Visual Feedback</strong>: Shows syllable counts, iteration progress, and special effects
 
-```ku
-Syllables are law,  
-Palindromes unlock magic,  
-Rhymes can twist the rules.
 
-Summon what you wrote,  
-Call it back in future lines—  
-Haikus become code.
 
-If-else, loops, and math,  
-All disguised in poetry—  
-Read, then feel it run.
-```
-
+<div align="center">
+  <code style="text-align: center; display: block;">
+    Syllables are law,<br>
+    Palindromes unlock magic,<br>
+    Rhymes can twist the rules.<br><br>
+    
+    Summon what you wrote,<br>
+    Call it back in future lines—<br>
+    Haikus become code.<br><br>
+    
+    If-else, loops, and math,<br>
+    All disguised in poetry—<br>
+    Read, then feel it run.
+  </code>
+</div>
 </div>
 
- ---
+ 
 
 <p align="center">
-  <h1>Try it</h1>
+  <h1>Try it!!</h1>
 </p>
 
 <p align="center">
@@ -82,14 +86,14 @@ Read, then feel it run.
 
 <div align="center">
 
-```bash
+<code style="text-align: center; display: block;">
 npm install -g ku-lang
-```
+</code>
 
 </div>
 
 <p align="center">
-  <em>💡 Note: On macOS/Linux, you may need to use <code>sudo npm install -g ku-lang</code> if you get permission errors.</em>
+  <em>Note: On macOS/Linux, you may need to use <code>sudo npm install -g ku-lang</code> if you get permission errors.</em>
 </p>
 
 <p align="center">
@@ -98,17 +102,17 @@ npm install -g ku-lang
 
 <div align="center">
 
-```bash
-git clone https://github.com/NewSmoke38/ku-lang.git
-cd ku-lang
-npm install
-npm link  
-```
+<code style="text-align: center; display: block;">
+git clone https://github.com/NewSmoke38/ku-lang<br>
+cd ku-lang<br>
+npm install<br>
+npm link
+</code>
 
 </div>
 
 <p align="center">
-  <em>💡 Note: You might need <code>sudo npm link</code> on macOS/Linux if you get permission errors.</em>
+  <em>Note: You might need <code>sudo npm link</code> on macOS/Linux if you get permission errors.</em>
 </p>
 
 <p align="center">
@@ -121,11 +125,11 @@ npm link
 
 <div align="center">
 
-```ku
-value remembers
-five plus five is the answer
+<code style="text-align: center; display: block;">
+value remembers<br>
+five plus five is the answer<br>
 echo value now
-```
+</code>
 
 </div>
 
@@ -135,48 +139,49 @@ echo value now
 
 <div align="center">
 
-```shell
+<code style="text-align: center; display: block;">
 ku hello.ku
-```
+</code>
 
 </div>
 
 <p align="center">
-  <strong>✅ Verify CLI installation:</strong>
+  <strong>Verify CLI installation:</strong>
 </p>
 
 <div align="center">
 
-```shell
-ku --version
+<code style="text-align: center; display: block;">
+ku --version<br>
 ku --help
-```
+</code>
 
 </div>
 
----
 
 <p align="center">
   <h2><strong>⭐︎ What I Learned Building Ku-Lang</strong></h2>
 </p>
 
 <p align="center">
-  Creating ku-lang taught me that programming languages are more than just about writing the correct syntax. I learned how to make a rigid 5-7-5 haiku structure work, where every line must be both functional and beautiful. Now i understand what an interpreter really does, from syllable counting of haikus to palindrome detection and rhyme analysis (its really cool btw). Even lines left empty between code blocks are to be specified so that the code doesnt crash lol. also comment functionality is a thing which i never gave attention to!! It was a great journey!!!
+  Creating ku-lang taught me that programming languages are more than just about writing the correct syntax. I learned how to make a rigid 5-7-5 haiku structure work, where every line must be both functional and beautiful. Now i understand what an interpreter really does, from syllable counting of haikus to palindrome detection and rhyme analysis (its really cool btw). i leanred how to publish my own CLI on npm,yaayy! Even lines left empty between code blocks are to be specified so that the code doesnt crash lol. also comment functionality is a thing which i never gave attention to!! It was a great journey!!!
 </p>
 
----
+<p>Read my notion Doc on how i made it! (coming soon)</p>
+
+
 
 <p align="center">
   <h1>⛳︎ Contributing in Ku-Lang!</h1>
 </p>
 
 <p align="center">
-  <strong>We welcome contributions to ku-lang!</strong>
+  <strong>Contributions are welcomed to ku-lang!</strong>
 </p>
 
 
 <p align="center">
-  <strong>Hop onto the <a href="https://newsmoke38.github.io/ku-lang/">ku-lang website</a> and run it on your machine! </strong>
+  <strong>Hop onto the "Try it" section and run it on your machine! </strong>
 </p>
 
 
