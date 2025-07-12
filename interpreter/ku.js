@@ -195,6 +195,7 @@ export function runKu(filePath) {
 
       let line = haiku[1].trim(); 
       const words = line.split(/\s+/); 
+      console.log('Loop in action: words disappear from the edges each round:');
       for (let iter = from; iter <= to && words.length > 0; iter++) {
         const consumedLine = words.join(' ');
         const syllables = countSyllables(consumedLine);

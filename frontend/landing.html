@@ -79,10 +79,10 @@
           <main class="flex-1 flex flex-col items-center px-4 pb-16 bg-white mx-auto max-w-4xl rounded-lg shadow-lg z-10 relative mt-[-32px]" style="margin-top: 0;">
         <nav class="w-full flex justify-between items-center py-6 text-xs text-gray-700">
           <div class="font-bold">Ku.Lang</div>
-          <div class="flex gap-6">
+          <div class="flex gap-8">
             <a href="#" id="haiku-link" class="hover:underline">haiku</a>
+            <a href="#" id="playground-link" class="hover:underline">playground</a>
             <a href="#" id="about-link" class="hover:underline">about</a>
-            <a href="#" class="hover:underline">services for</a>
             <a href="#" id="error-gallery-link" class="hover:underline">Error Gallery</a>
             <a href="#" id="contact-link" class="hover:underline">contact</a>
           </div>
@@ -138,7 +138,7 @@
           });
         </script>
       </section>
-      <section class="w-full flex flex-col items-center mt-8 mb-16">
+      <section class="w-full flex flex-col items-center mt-16 mb-16">
         <h2 class="pixel-font text-5xl md:text-6xl text-black text-center leading-tight mb-8">WHAT'S<br><span class="text-3xl md:text-5xl">A SYLLABLE?</span></h2>
         <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-base text-gray-800 max-w-xl text-left shadow-md mt-4 mb-2 whitespace-pre-line">
           <span class="font-bold text-lg text-pink-500">syl·la·ble</span>  |  'sɪləb(ə)l  |<br>
@@ -195,36 +195,37 @@
             <table class="w-full text-left text-base">
               <thead>
                 <tr>
-                  <th class="pb-4 text-pink-500 text-lg font-bold">feature</th>
-                  <th class="pb-4 text-pink-500 pr-8 text-lg font-bold">example</th>
-                  <th class="pb-4 text-pink-500 text-lg font-bold">what it does</th>
+                  <th class="pb-4 text-pink-500 text-lg font-bold text-center">feature</th>
+                  <th class="pb-4 text-pink-500 pr-8 text-lg font-bold text-center">example</th>
+                  <th class="pb-4 text-pink-500 text-lg font-bold text-center">what it does</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="border-t-4 border-pink-200 align-top">
-                  <td class="py-4 align-top font-bold text-lg">variable</td>
-                  <td class="py-4 align-top pr-8">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line">
-                      the moon remembers<br>five plus two<br>echo softly
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">variable</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
+                      the moon remembers<br>five plus two in the night sky<br>echo moon bright now
                     </blockquote>
                   </td>
-                  <td class="py-4 align-top text-base">Assigns and prints variable
+                  <td class="py-4 align-top text-base text-center">Assigns and prints variable
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="variable-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="variable-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Variable Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">Variable Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>Line 1:</strong> <code>the [name] remembers</code> - Variable declaration</div>
         <div><strong>Line 2:</strong> <code>[expression]</code> - Math using number words (one, two, three...) and operators (plus, minus)</div>
         <div><strong>Line 3:</strong> <code>echo [name]</code> - Print the variable value</div>
                                 <div class="mt-2"><strong>Syntax:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
                           the [variable] remembers<br>[expression]<br>echo [variable]
                         </div>
                         <div class="mt-2"><strong>Example:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
+                        <div class="text-sm text-pink-500 mb-1">(syntax template - not a valid haiku to test)</div>
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
                           the moon remembers<br>five plus two<br>echo moon
                         </div>
         <div class="mt-2"><strong>Number words:</strong> one, two, three, four, five, six, seven, eight, nine, ten</div>
@@ -235,29 +236,30 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-4 align-top font-bold text-lg">summon function</td>
-                  <td class="py-4 align-top pr-8">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line">
-                      summon the sun<br>the light remembers<br>three plus four
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">summon function</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
+                      summon the sun now<br>the light remembers the day<br>three plus four is bright
                     </blockquote>
                   </td>
-                  <td class="py-4 align-top text-base">Defines a function
+                  <td class="py-4 align-top text-base text-center">Defines a function
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="summon-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="summon-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Summon Function Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">Summon Function Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>Line 1:</strong> <code>summon [function_name]</code> - Function declaration</div>
         <div><strong>Line 2:</strong> <code>[any haiku line]</code> - Function body (must be 7 syllables)</div>
         <div><strong>Line 3:</strong> <code>[any haiku line]</code> - Function body (must be 5 syllables)</div>
                                 <div class="mt-2"><strong>Syntax:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
                           summon [function_name]<br>[any haiku line]<br>[any haiku line]
                         </div>
                         <div class="mt-2"><strong>Example:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
+                        <div class="text-sm text-pink-500 mb-1">(syntax template - not a valid haiku to test)</div>
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
                           summon the sun<br>the light remembers<br>three plus four
                         </div>
         <div class="mt-2"><strong>Special:</strong> If palindrome word found, function gets reversed</div>
@@ -268,29 +270,30 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-4 align-top font-bold text-lg">call function</td>
-                  <td class="py-4 align-top pr-8">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line">
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">call function</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
                       call the sun now<br>the light remembers<br>five plus five
                     </blockquote>
                   </td>
-                  <td class="py-4 align-top text-base">Calls a function
+                  <td class="py-4 align-top text-base text-center">Calls a function
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="call-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="call-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Call Function Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">Call Function Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>Line 1:</strong> <code>call the [function_name]</code> - Function call</div>
         <div><strong>Line 2:</strong> <code>[any haiku line]</code> - Call body (must be 7 syllables)</div>
         <div><strong>Line 3:</strong> <code>[any haiku line]</code> - Call body (must be 5 syllables)</div>
                                 <div class="mt-2"><strong>Syntax:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
                           call the [function_name]<br>[any haiku line]<br>[any haiku line]
                         </div>
                         <div class="mt-2"><strong>Example:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
+                        <div class="text-sm text-pink-500 mb-1">(syntax template - not a valid haiku to test)</div>
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
                           call the sun now<br>the light remembers<br>five plus five
                         </div>
         <div class="mt-2"><strong>Special:</strong> If palindrome word found, call gets reversed</div>
@@ -302,63 +305,91 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-4 align-top font-bold text-lg">if statement</td>
-                  <td class="py-4 align-top pr-8">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line">
-                      if moon is great<br>the stars remember<br>one plus one
-                    </blockquote>
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">if statement</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <div class="space-y-3">
+                      <div>
+                        <div class="text-xs text-pink-500 mb-1 font-bold">Case 1: True Condition</div>
+                        <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
+                          the stars remember<br>five plus two in the dark night<br>echo stars shine bright<br><br>the sum remember<br>one plus one in the bright sky<br>echo sum again<br><br>if stars is greater than three<br>this is a haiku line<br>this is another line<br><br>the sum remember<br>one plus one in the bright sky<br>echo sum again
+                        </blockquote>
+                      </div>
+                      <div>
+                        <div class="text-xs text-pink-500 mb-1 font-bold">Case 2: False Condition</div>
+                        <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
+                          the stars remember<br>five plus two in the night sky<br>echo stars again<br><br>the sum remember<br>one plus one in the bright sky<br>echo sum again<br><br>if stars is greater than ten<br>this is a haiku line<br>this is another line
+                        </blockquote>
+                      </div>
+                      <div>
+                        <div class="text-xs text-pink-500 mb-1 font-bold">Case 3: Variable Not Set</div>
+                        <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
+                          if moon is greater<br>the stars remember<br>one plus one
+                        </blockquote>
+                      </div>
+                    </div>
                   </td>
-                  <td class="py-4 align-top text-base">Conditional execution
+                  <td class="py-4 align-top text-base text-center">Conditional execution with different test cases
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="if-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="if-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">If Statement Anatomy:</h4>
-      <div class="text-xs space-y-2">
-        <div><strong>Line 1:</strong> <code>if [variable] is great</code> - Condition check</div>
+      <h4 class="font-bold text-base mb-2">If Statement Anatomy:</h4>
+      <div class="text-sm space-y-2">
+        <div><strong>Line 1:</strong> <code>if [variable] is greater</code> - Condition check</div>
         <div><strong>Line 2:</strong> <code>[any haiku line]</code> - Condition body (must be 7 syllables)</div>
         <div><strong>Line 3:</strong> <code>[any haiku line]</code> - Condition body (must be 5 syllables)</div>
                                 <div class="mt-2"><strong>Syntax:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
-                          if [variable] is great<br>[any haiku line]<br>[any haiku line]
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
+                          if [variable] is greater<br>[any haiku line]<br>[any haiku line]
                         </div>
-                        <div class="mt-2"><strong>Example:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
-                          if moon is great<br>the stars remember<br>one plus one
+                        <div class="mt-2"><strong>Test Cases:</strong></div>
+                        <div class="text-sm text-pink-500 mb-1">Case 1: True Condition (stars=8, condition=3)</div>
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
+                          the stars remember<br>five plus two in the dark night<br>echo stars shine bright<br><br>the sum remember<br>one plus one in the bright sky<br>echo sum again<br><br>if stars is greater than three<br>this is a haiku line<br>this is another line<br><br>the sum remember<br>one plus one in the bright sky<br>echo sum again
                         </div>
-        <div class="mt-2"><strong>Logic:</strong> If variable > value in next haiku, execute next haiku</div>
-        <div><strong>Next haiku:</strong> Must follow immediately after if statement</div>
+                        <div class="text-sm text-pink-500 mb-1">Case 2: False Condition (stars=8, condition=10)</div>
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
+                          the stars remember<br>five plus two in the night sky<br>echo stars again<br><br>the sum remember<br>one plus one in the bright sky<br>echo sum again<br><br>if stars is greater than ten<br>this is a haiku line<br>this is another line
+                        </div>
+                        <div class="text-sm text-pink-500 mb-1">Case 3: Variable Not Set</div>
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
+                          if moon is greater<br>the stars remember<br>one plus one
+                        </div>
+        <div class="mt-2"><strong>Logic:</strong> If variable > value in if line, execute next haiku</div>
+        <div><strong>Comparison:</strong> Value is parsed from "if [var] is greater [number]"</div>
+        <div><strong>Error:</strong> If variable not set, shows helpful error message</div>
       </div>
     </div>
   </div>
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-4 align-top font-bold text-lg">regular haiku</td>
-                  <td class="py-4 align-top pr-8">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line">
-                      the river flows<br>three plus three is gentle<br>echo softly
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">regular haiku</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
+                      the river is calm<br>three plus three is flowing now<br>echo river now
                     </blockquote>
                   </td>
-                  <td class="py-4 align-top text-base">Assignment/echo (default)
+                  <td class="py-4 align-top text-base text-center">Assignment/echo (default)
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="regular-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="regular-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Regular Haiku Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">Regular Haiku Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>Line 1:</strong> <code>the [name] remembers</code> - Variable declaration (5 syllables)</div>
         <div><strong>Line 2:</strong> <code>[expression]</code> - Math expression (7 syllables)</div>
         <div><strong>Line 3:</strong> <code>echo [name]</code> - Print command (5 syllables)</div>
                                 <div class="mt-2"><strong>Syntax:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
                           the [variable] remembers<br>[expression]<br>echo [variable]
                         </div>
                         <div class="mt-2"><strong>Example:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
-                          the river flows<br>three plus three is gentle<br>echo softly
+                        <div class="text-sm text-pink-500 mb-1">(syntax template - not a valid haiku to test)</div>
+                        <div class="bg-white p-2 rounded border text-sm font-mono">
+                          the river is calm<br>three plus three is flowing now<br>echo river now
                         </div>
         <div class="mt-2"><strong>Default behavior:</strong> Assigns value and prints variable</div>
         <div><strong>Special effects:</strong> Can trigger rhyme doubling or palindrome reversal</div>
@@ -368,29 +399,30 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-4 align-top font-bold text-lg">palindrome</td>
-                  <td class="py-4 align-top pr-8">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line">
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">palindrome</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
                       the sun remembers<br>one plus two plus two civic<br>echo civic now
                     </blockquote>
                   </td>
-                  <td class="py-4 align-top text-base">Reverses haiku if palindrome word found
+                  <td class="py-4 align-top text-base text-center">Reverses haiku if palindrome word found
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="palindrome-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="palindrome-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Palindrome Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">Palindrome Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>Trigger:</strong> Any palindrome word in haiku (civic, kayak, radar, etc.)</div>
         <div><strong>Effect:</strong> Reverses word order in all three lines</div>
         <div><strong>Output:</strong> Shows "🧚🏼 Palindrome detected! Reversing haiku:"</div>
         <div class="mt-2"><strong>Example:</strong></div>
-        <div class="bg-white p-2 rounded border text-xs font-mono">
+        <div class="text-sm text-pink-500 mb-1">(syntax template - not a valid haiku to test)</div>
+        <div class="bg-white p-2 rounded border text-sm font-mono">
           the sun remembers<br>one plus two plus two civic<br>echo civic now
         </div>
         <div class="mt-2"><strong>Becomes:</strong></div>
-        <div class="bg-white p-2 rounded border text-xs font-mono">
+        <div class="bg-white p-2 rounded border text-sm font-mono">
           now civic echo<br>civic two plus two plus one<br>remembers sun the
         </div>
         <div class="mt-2"><strong>Validation:</strong> Palindrome word must be valid English word</div>
@@ -400,28 +432,28 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-4 align-top font-bold text-lg">rhyming</td>
-                  <td class="py-4 align-top pr-8">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line">
-                      the moon remembers<br>five plus two in the night<br>echo moon bright
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">rhyming</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
+                      the stars remember<br>five plus two in the dark night<br>echo stars shine bright
                     </blockquote>
                   </td>
-                  <td class="py-4 align-top text-base">Doubles variable value if lines rhyme
+                  <td class="py-4 align-top text-base text-center">Doubles variable value if lines rhyme
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="rhyme-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="rhyme-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Rhyme Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">Rhyme Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>Trigger:</strong> Any two lines rhyme (end with same sound)</div>
         <div><strong>Effect:</strong> Doubles the variable value</div>
         <div><strong>Detection:</strong> Checks line 1-2, 1-3, and 2-3 for rhymes</div>
         <div class="mt-2"><strong>Example:</strong></div>
-        <div class="bg-white p-2 rounded border text-xs font-mono">
-          the moon remembers<br>five plus two in the night<br>echo moon bright
+        <div class="bg-white p-2 rounded border text-sm font-mono">
+          the stars remember<br>five plus two in the dark night<br>echo stars shine bright
         </div>
-        <div class="mt-2"><strong>Result:</strong> "night" and "bright" rhyme, so moon = 14 (7×2)</div>
+        <div class="mt-2"><strong>Result:</strong> "night" and "bright" rhyme, so stars = 14 (7×2)</div>
         <div><strong>Output:</strong> Variable prints with doubled value</div>
       </div>
     </div>
@@ -429,13 +461,13 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-4 align-top font-bold text-lg">function fusion</td>
-                  <td class="py-4 align-top pr-8">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line">
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">function fusion</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[320px]">
                       summon magic now<br>civic flows at dawn today<br>birds fly in the sky<br><br>call the magic now<br>kayak glides on lake today<br>ripples in the blue
                     </blockquote>
                   </td>
-                  <td class="py-4 align-top text-base">Fuses summoned and calling haikus, reverses if palindromes found
+                  <td class="py-4 align-top text-base text-center">Fuses summoned and calling haikus, reverses if palindromes found
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="fusion-anatomy">
       ▼ Show Anatomy
@@ -462,34 +494,34 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-3 align-top font-bold">loop</td>
-                  <td class="py-3 align-top pr-6">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-3 pr-2 py-1 rounded font-mono text-xs whitespace-pre-line">
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">loop</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
                       count from one to three<br>words disappear one by one<br>until none remain
                     </blockquote>
                   </td>
-                  <td class="py-3 align-top">Loops and consumes words
+                  <td class="py-4 align-top text-base text-center">Loops and consumes words
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="loop-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="loop-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Loop Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">Loop Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>Line 1:</strong> <code>count from [number] to [number]</code> - Loop range</div>
         <div><strong>Line 2:</strong> <code>[words to consume]</code> - Words that get eaten (7 syllables)</div>
         <div><strong>Line 3:</strong> <code>[any haiku line]</code> - Loop body (5 syllables)</div>
-                                <div class="mt-2"><strong>Syntax:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
-                          count from [number] to [number]<br>[words to consume]<br>[any haiku line]
-                        </div>
-                        <div class="mt-2"><strong>Example:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
-                          count from one to three<br>words disappear one by one<br>until none remain
-                        </div>
+        <div class="mt-2"><strong>Syntax:</strong></div>
+        <div class="bg-white p-2 rounded border text-sm font-mono">
+          count from [number] to [number]<br>[words to consume]<br>[any haiku line]
+        </div>
+        <div class="mt-2"><strong>Example:</strong></div>
+        <div class="bg-white p-2 rounded border text-sm font-mono">
+          count from one to three<br>words disappear one by one<br>until none remain
+        </div>
         <div class="mt-2"><strong>Output:</strong></div>
-        <div class="bg-white p-2 rounded border text-xs font-mono">
-          🌀 Iteration 1: "words disappear one by one" (7 syllables)<br>🌀 Iteration 2: "disappear one by" (5 syllables)<br>🌀 Iteration 3: "one by" (2 syllables)
+        <div class="bg-white p-2 rounded border text-sm font-mono">
+          Loop in action: words disappear from the edges each round:<br>🌀 Iteration 1: "words disappear one by one" (7 syllables)<br>🌀 Iteration 2: "disappear one by" (5 syllables)<br>🌀 Iteration 3: "one by" (2 syllables)
         </div>
         <div class="mt-2"><strong>Range:</strong> Uses number words: one, two, three, four, five, etc.</div>
       </div>
@@ -498,31 +530,31 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-3 align-top font-bold">comments</td>
-                  <td class="py-3 align-top pr-6">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-3 pr-2 py-1 rounded font-mono text-xs whitespace-pre-line">
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">comments</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
                       the moon remembers<br>five plus two // assign value<br>echo softly now
                     </blockquote>
                   </td>
-                  <td class="py-3 align-top">Ignores // comments
+                  <td class="py-4 align-top text-base text-center">Ignores // comments
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="comments-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="comments-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Comments Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">Comments Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>Syntax:</strong> <code>// [comment text]</code> - Double slash followed by text</div>
         <div><strong>Placement:</strong> Can appear anywhere in a line</div>
         <div><strong>Behavior:</strong> Everything after // is ignored</div>
-                                <div class="mt-2"><strong>Syntax:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
-                          [any haiku line]<br>[any haiku line] // [comment]<br>[any haiku line]
-                        </div>
-                        <div class="mt-2"><strong>Example:</strong></div>
-                        <div class="bg-white p-2 rounded border text-xs font-mono">
-                          the moon remembers<br>five plus two // assign value<br>echo softly now
-                        </div>
+        <div class="mt-2"><strong>Syntax:</strong></div>
+        <div class="bg-white p-2 rounded border text-sm font-mono">
+          [any haiku line]<br>[any haiku line] // [comment]<br>[any haiku line]
+        </div>
+        <div class="mt-2"><strong>Example:</strong></div>
+        <div class="bg-white p-2 rounded border text-sm font-mono">
+          the moon remembers<br>five plus two // assign value<br>echo softly now
+        </div>
         <div class="mt-2"><strong>Processed:</strong> Only "five plus two" is used, "// assign value" is ignored</div>
         <div><strong>Preservation:</strong> Haiku structure must still be valid (5-7-5 syllables)</div>
       </div>
@@ -531,20 +563,20 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-3 align-top font-bold">english validation</td>
-                  <td class="py-3 align-top pr-6">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-3 pr-2 py-1 rounded font-mono text-xs whitespace-pre-line">
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">english validation</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
                       the moon remembers<br>five plus two in the night<br>echo moon bright
                     </blockquote>
                   </td>
-                  <td class="py-3 align-top">Validates all words are English
+                  <td class="py-4 align-top text-base text-center">Validates all words are English
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="english-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="english-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">English Validation Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">English Validation Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>Check:</strong> Every word must be in English dictionary</div>
         <div><strong>Process:</strong> Strips punctuation, checks lowercase version</div>
         <div><strong>Error:</strong> "'[word]' is not a valid English word!!"</div>
@@ -556,49 +588,49 @@
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-3 align-top font-bold">visual feedback</td>
-                  <td class="py-3 align-top pr-6">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-3 pr-2 py-1 rounded font-mono text-xs whitespace-pre-line">
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">visual feedback</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
                       🔮 Summoned function<br>🧚🏼 Palindrome detected<br>✨ Fused Haiku
                     </blockquote>
                   </td>
-                  <td class="py-3 align-top">Emojis for different actions
+                  <td class="py-4 align-top text-base text-center">Emojis for different actions
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="visual-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="visual-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Visual Feedback Anatomy:</h4>
-      <div class="text-xs space-y-2">
+      <h4 class="font-bold text-base mb-2">Visual Feedback Anatomy:</h4>
+      <div class="text-sm space-y-2">
         <div><strong>🔮:</strong> "Summoned function '[name]'" - When function is defined</div>
         <div><strong>🧚🏼:</strong> "Palindrome detected! Reversing..." - When palindrome found</div>
         <div><strong>✨:</strong> "Fused Haiku:" - When function fusion occurs</div>
         <div><strong>🌀:</strong> "Iteration X:" - During loop execution</div>
         <div><strong>🌀:</strong> "Called function '[name]'" - When function is called</div>
-                                <div class="mt-2"><strong>Error symbols:</strong> -_- : (syllable error), +_+ : (loop error), <?> : (condition error)</div>
+        <div class="mt-2"><strong>Error symbols:</strong> -_- : (syllable error), +_+ : (loop error), <?> : (condition error)</div>
       </div>
     </div>
   </div>
 </td>
                 </tr>
                 <tr class="border-t">
-                  <td class="py-3 align-top font-bold">error</td>
-                  <td class="py-3 align-top pr-6">
-                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-3 pr-2 py-1 rounded font-mono text-xs whitespace-pre-line">
+                  <td class="py-4 align-top font-bold text-lg text-center pr-8">error</td>
+                  <td class="py-4 align-top pr-8 text-center">
+                    <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-3 py-2 rounded font-mono text-sm whitespace-pre-line min-w-[280px]">
                       this is not right<br>too many syllables here<br>error will appear
                     </blockquote>
                   </td>
-                  <td class="py-3 align-top">Prints error with visual feedback
+                  <td class="py-4 align-top text-base text-center">Prints error with visual feedback
   <div class="mt-4">
     <button class="feature-dropdown-btn mx-auto text-left text-xs text-pink-500 hover:text-white hover:bg-pink-500 border border-pink-400 bg-white rounded-full shadow-sm font-bold transition px-4 py-2 mb-2" data-target="error-anatomy">
       ▼ Show Anatomy
     </button>
     <div id="error-anatomy" class="feature-anatomy hidden mt-3 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-bold text-sm mb-2">Error Handling Anatomy:</h4>
-      <div class="text-xs space-y-2">
-                                <div><strong>-_- :</strong> Syllable count errors - "Line X has Y syllables (expected Z)"</div>
-                        <div><strong>+_+ :</strong> Loop range errors - "Invalid loop range"</div>
-                        <div><strong><?> :</strong> Condition errors - "No haiku to evaluate after condition"</div>
+      <h4 class="font-bold text-base mb-2">Error Handling Anatomy:</h4>
+      <div class="text-sm space-y-2">
+        <div><strong>-_- :</strong> Syllable count errors - "Line X has Y syllables (expected Z)"</div>
+        <div><strong>+_+ :</strong> Loop range errors - "Invalid loop range"</div>
+        <div><strong><?> :</strong> Condition errors - "No haiku to evaluate after condition"</div>
         <div><strong>English:</strong> "'[word]' is not a valid English word!!"</div>
         <div><strong>Palindrome:</strong> "'[word]' is not a valid English word palindrome"</div>
         <div class="mt-2"><strong>Function:</strong> "Function '[name]' not found" or "Error in function '[name]'"</div>
@@ -829,7 +861,7 @@ Ku-Lang is just another one of those side quests ♨︎.
               <div class="text-center">
                 <h3 class="pixel-font text-xl md:text-2xl text-pink-600 mb-6">woof</h3>
                 <div class="flex justify-center">
-                  <img src="/assets/pinkCreature.gif" alt="Pink Creature" class="max-w-md rounded-lg shadow-lg" />
+                  <img src="/assets/rabbit.jpg" alt="Rabbit" class="max-w-md rounded-lg shadow-lg" />
                 </div>
               </div>
             </div>
@@ -850,7 +882,7 @@ Ku-Lang is just another one of those side quests ♨︎.
                   <div class="bg-white p-6 rounded-lg shadow-md">
                     <h4 class="font-bold text-lg text-pink-600 mb-4">Variables</h4>
                     <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
-                      the moon remembers<br>five plus two in the night<br>echo moon bright
+                      the moon remembers<br>five plus two in the night sky<br>echo moon bright now
                     </blockquote>
                     <p class="text-gray-600 text-sm">
                       Stores the value 7 in variable "moon" and outputs it.
@@ -859,7 +891,7 @@ Ku-Lang is just another one of those side quests ♨︎.
                   <div class="bg-white p-6 rounded-lg shadow-md">
                     <h4 class="font-bold text-lg text-pink-600 mb-4">Functions</h4>
                     <blockquote class="bg-pink-50 border-l-4 border-pink-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
-                      summon the sun now<br>the light remembers<br>three plus four
+                      summon the sun now<br>the light remembers the day<br>three plus four is bright
                     </blockquote>
                     <p class="text-gray-600 text-sm">
                       Defines function "sun" and calls it to output 7.
@@ -881,6 +913,157 @@ Ku-Lang is just another one of those side quests ♨︎.
                 </div>
               </div>
             </div>
+          </section>
+        </div>
+        
+        <div id="playground-content" class="hidden">
+          <section class="flex flex-col items-center justify-center min-h-[80vh] py-8">
+            <h2 class="pixel-font text-4xl md:text-5xl text-black text-center leading-tight mb-8">KU-LANG<br><span class="text-2xl md:text-3xl text-pink-500">PLAYGROUND</span></h2>
+            <style>
+              @font-face {
+                font-family: PixelText;
+                src: url(https://assets.codepen.io/36869/Grand9KPixel.ttf);
+              }
+              .ku-book {
+                font-family: 'PixelText', monospace;
+                background: #e7d9b6;
+                border: 8px solid #a97c50;
+                border-radius: 32px;
+                box-shadow: 0 8px 32px #0006, 0 1px 0 #fff8 inset;
+                display: flex;
+                width: 700px;
+                max-width: 98vw;
+                min-height: 380px;
+                position: relative;
+                overflow: visible;
+              }
+              .ku-book-page {
+                flex: 1;
+                padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+                background: repeating-linear-gradient(90deg, #f8eecb 0 2px, transparent 2px 1fr), #f8eecb;
+                box-shadow: 2px 0 0 #cbb07a inset;
+                min-height: 340px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                position: relative;
+              }
+              .ku-book-page.left {
+                border-right: 4px solid #cbb07a;
+                border-top-left-radius: 24px;
+                border-bottom-left-radius: 24px;
+              }
+              .ku-book-page.right {
+                border-left: 4px solid #cbb07a;
+                border-top-right-radius: 24px;
+                border-bottom-right-radius: 24px;
+              }
+              .ku-haiku-editor {
+                width: 100%;
+                height: 180px;
+                background: #fff8;
+                border: 2px solid #bfa36a;
+                border-radius: 12px;
+                font-family: 'PixelText', monospace;
+                font-size: 1rem;
+                color: #be185d;
+                padding: 1rem;
+                resize: none;
+                margin-bottom: 1.5rem;
+                box-shadow: 0 2px 8px #0001 inset;
+              }
+              .ku-haiku-editor::placeholder {
+                color: #be185d;
+                opacity: 1;
+              }
+              .ku-haiku-btn {
+                font-family: 'PixelText', monospace;
+                background: #f4b8e4;
+                color: #5a3c1a;
+                border: 2px solid #bfa36a;
+                border-radius: 8px;
+                padding: 0.5rem 1.5rem;
+                font-size: 1rem;
+                margin-right: 0.5rem;
+                margin-bottom: 0.5rem;
+                cursor: pointer;
+                box-shadow: 0 2px 8px #0001;
+                transition: background 0.2s;
+              }
+              .ku-haiku-btn:hover {
+                background: #f7d6f0;
+              }
+              .ku-haiku-output {
+                width: 100%;
+                min-height: 180px;
+                background: #fff8;
+                border: 2px solid #bfa36a;
+                border-radius: 12px;
+                font-family: 'PixelText', monospace;
+                font-size: 1rem;
+                color: #5a3c1a;
+                padding: 1rem;
+                box-shadow: 0 2px 8px #0001 inset;
+                white-space: pre-wrap;
+                margin-bottom: 1.5rem;
+              }
+              .ku-pixel-cat {
+                position: absolute;
+                right: -60px;
+                bottom: -30px;
+                width: 120px;
+                z-index: 2;
+                filter: drop-shadow(0 4px 12px #0005);
+                pointer-events: none;
+              }
+              @media (max-width: 900px) {
+                .ku-book { width: 98vw; }
+                .ku-pixel-cat { right: 0; width: 80px; }
+              }
+              @media (max-width: 600px) {
+                .ku-book { flex-direction: column; min-width: 0; min-height: 0; }
+                .ku-book-page { min-height: 120px; padding: 1rem; }
+                .ku-pixel-cat { display: none; }
+              }
+            </style>
+            <div class="ku-book">
+              <div class="ku-book-page left">
+                <label for="ku-haiku-editor" style="font-size:1.1rem; color:#a97c50; margin-bottom:0.5rem;">Write your haiku:</label>
+                <textarea id="ku-haiku-editor" class="ku-haiku-editor" placeholder="// write your haiku"></textarea>
+                <div>
+                  <button id="ku-haiku-run" class="ku-haiku-btn">Run</button>
+                  <button id="ku-haiku-clear" class="ku-haiku-btn">Clear</button>
+                  <button id="ku-haiku-example" class="ku-haiku-btn">Example</button>
+                </div>
+              </div>
+              <div class="ku-book-page right">
+                <label for="ku-haiku-output" style="font-size:1.1rem; color:#a97c50; margin-bottom:0.5rem;">Output:</label>
+                <div id="ku-haiku-output" class="ku-haiku-output">Your poetic output will appear here!</div>
+              </div>
+              <img src="/assets/pinkCreature.gif" alt="Pixel Cat" class="ku-pixel-cat" />
+            </div>
+            <script src="../frontend/syllable.js"></script>
+            <script type="module">
+              import { runKuBrowser } from '../interpreter/ku-browser.js';
+              const exampleHaiku = `summon add_numbers\nfive plus three is the result\necho the sum now\n\ncall the add_numbers\nwith some extra parameters\nexecute the code now`;
+              const editor = document.getElementById('ku-haiku-editor');
+              const output = document.getElementById('ku-haiku-output');
+              document.getElementById('ku-haiku-run').onclick = function() {
+                try {
+                  output.textContent = runKuBrowser(editor.value);
+                } catch (e) {
+                  output.textContent = e.message;
+                }
+              };
+              document.getElementById('ku-haiku-clear').onclick = function() {
+                editor.value = '';
+                output.textContent = 'Your poetic output will appear here!';
+              };
+              document.getElementById('ku-haiku-example').onclick = function() {
+                editor.value = exampleHaiku;
+                output.textContent = 'Your poetic output will appear here!';
+              };
+            </script>
           </section>
         </div>
         
@@ -947,11 +1130,13 @@ Ku-Lang is just another one of those side quests ♨︎.
 
       // Page toggle functionality
       const haikuLink = document.getElementById('haiku-link');
+      const playgroundLink = document.getElementById('playground-link');
       const errorGalleryLink = document.getElementById('error-gallery-link');
       const aboutLink = document.getElementById('about-link');
       const contactLink = document.getElementById('contact-link');
       const mainContent = document.getElementById('main-content');
       const haikuContent = document.getElementById('haiku-content');
+      const playgroundContent = document.getElementById('playground-content');
       const errorGalleryContent = document.getElementById('error-gallery-content');
       const aboutContent = document.getElementById('about-content');
       const contactContent = document.getElementById('contact-content');
@@ -959,6 +1144,7 @@ Ku-Lang is just another one of those side quests ♨︎.
       function hideAllContent() {
         mainContent.classList.add('hidden');
         haikuContent.classList.add('hidden');
+        playgroundContent.classList.add('hidden');
         errorGalleryContent.classList.add('hidden');
         aboutContent.classList.add('hidden');
         contactContent.classList.add('hidden');
@@ -968,6 +1154,12 @@ Ku-Lang is just another one of those side quests ♨︎.
         e.preventDefault();
         hideAllContent();
         mainContent.classList.remove('hidden');
+      });
+
+      playgroundLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideAllContent();
+        playgroundContent.classList.remove('hidden');
       });
 
       errorGalleryLink.addEventListener('click', (e) => {

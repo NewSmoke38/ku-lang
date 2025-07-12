@@ -144,6 +144,8 @@ export function runKuBrowser(code) {
       }
       let line = haiku[1].trim();
       const words = line.split(/\s+/);
+      // Add explanation before loop output
+      outputLines.push('Loop in action: words disappear from the edges each round:');
       for (let iter = from; iter <= to && words.length > 0; iter++) {
         const consumedLine = words.join(' ');
         const syllables = countSyllables(consumedLine);
@@ -238,6 +240,12 @@ export function runKuBrowser(code) {
     }
     const hasPalindrome = hasPalindromeWord(haiku);
     try {
+      // Add checking logs for regular haikus
+      const expected = [5, 7, 5];
+      for (let j = 0; j < 3; j++) {
+        const actual = countSyllables(haiku[j]);
+        outputLines.push(`[checking]: ${haiku[j]} (${actual}/${expected[j]})`);
+      }
       validateHaiku(haiku, i);
       if (hasPalindrome) {
         outputLines.push(`🧚🏼 Palindrome detected! Reversing haiku:`);
