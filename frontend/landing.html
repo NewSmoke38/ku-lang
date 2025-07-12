@@ -107,11 +107,25 @@
         </div>
         <script>
           const haikus = [
-            `the moon remembers\nfive plus two in the night\necho moon bright`,
-            `summon the sun now\nthe light remembers\nthree plus four`,
-            `if stars are greater\nshine above the silent lake\necho softly now`,
-            `call the river now\nwater flows through gentle stones\nwhisper to the sea`,
-            `value remembers\nfive plus five is the answer\necho value now`
+            `the moon remembers\nfive plus two in the night sky\necho moon bright now`,
+            `the river is calm\nthree plus three is flowing now\necho river now`,
+            
+            `the stars remember\nfive plus two in the dark night\necho stars shine bright`,
+            
+            `the sun remembers\none plus two plus two civic\necho civic now`,
+            
+            `summon the sun now\nthe light remembers the day\nthree plus four is bright`,
+            `call the sun now\nthe light remembers\nfive plus five`,
+            
+            `summon magic now\ncivic flows at dawn today\nbirds fly in the sky\n\ncall the magic now\nkayak glides on lake today\nripples in the blue`,
+            
+            `the stars remember\nfive plus two in the dark night\necho stars shine bright\n\nthe sum remember\none plus one in the bright sky\necho sum again\n\nif stars is greater than three\nthis is a haiku line\nthis is another line`,
+            
+            `count from one to three\nwords disappear one by one\nuntil none remain`,
+            
+            `the moon remembers\nfive plus two // assign value\necho softly now`,
+            
+            `this is not right\ntoo many syllables here\nerror will appear`
           ];
           const btn = document.getElementById('lets-start-btn');
           const box = document.getElementById('random-haiku-box');
@@ -137,6 +151,7 @@
             e.stopPropagation();
           });
         </script>
+
       </section>
       <section class="w-full flex flex-col items-center mt-16 mb-16">
         <h2 class="pixel-font text-5xl md:text-6xl text-black text-center leading-tight mb-8">WHAT'S<br><span class="text-3xl md:text-5xl">A SYLLABLE?</span></h2>
@@ -643,6 +658,11 @@
             </table>
           </div>
         </div>
+
+        <div class="relative w-full h-40 overflow-hidden mt-8">
+          <img src="/assets/unicorn.gif" alt="Walking unicorn" class="absolute top-2 h-36 w-auto" style="animation: bounce 20s linear infinite;" />
+        </div>
+
       </section>
 
         </div>
@@ -685,8 +705,7 @@
            <div class="bg-white p-6 rounded-lg shadow-md">
              <div class="text-orange-500 font-bold mb-2">'supercalifragilistic' is not a valid English word!!</div>
                 <blockquote class="bg-orange-50 border-l-4 border-orange-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
-                  
-                  the supercalifragilistic remembers<br>five plus two<br>echo magic
+the supercalifragilistic remembers<br>five plus two<br>echo magic
                 </blockquote>
                 <p class="text-sm text-gray-600 italic">
                   Solution: Use a valid English word from the dictionary
@@ -762,11 +781,8 @@
             <div class="grid md:grid-cols-2 gap-8">
               <div class="bg-white p-6 rounded-lg shadow-md">
                 <div class="text-green-500 font-bold mb-2">Function 'moonlight' not found</div>
-               
                 <blockquote class="bg-green-50 border-l-4 border-green-400 pl-4 pr-4 py-3 rounded font-mono text-sm text-gray-800 whitespace-pre-line mb-4">
-                  call the moonlight now<br>
-                  the stars remember<br>
-                  five plus five
+call the moonlight now<br>the stars remember<br>five plus five
                 </blockquote>
                 <p class="text-sm text-gray-600 italic">
                   Solution: Define the function first using "summon" before calling it
@@ -841,10 +857,13 @@ Ku-Lang is just another one of those side quests ♨︎.
                   <div class="mb-6">
                     <h4 class="font-bold text-lg text-gray-700 mb-4">MIT License</h4>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                      Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+                      Permission is granted, free of charge, to use, copy, modify, and distribute this software and its documentation for any purpose, including commercial use, subject to the following conditions:
                     </p>
                     <p class="text-gray-600 text-sm leading-relaxed mt-4">
-                      The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                      The above copyright notice and this permission notice must be included in all copies or substantial portions of the Software.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed mt-4">
+                      This software is provided "as is", without warranty of any kind. The authors are not liable for any claim, damage, or other liability arising from its use.
                     </p>
                   </div>
                   <div class="border-t border-gray-200 pt-6">
@@ -1045,9 +1064,32 @@ Ku-Lang is just another one of those side quests ♨︎.
             <script src="../frontend/syllable.js"></script>
             <script type="module">
               import { runKuBrowser } from '../interpreter/ku-browser.js';
-              const exampleHaiku = `summon add_numbers\nfive plus three is the result\necho the sum now\n\ncall the add_numbers\nwith some extra parameters\nexecute the code now`;
+              
+              const haikuExamples = [
+                `the moon remembers\nfive plus two in the night sky\necho moon bright now`,
+                `the river is calm\nthree plus three is flowing now\necho river now`,
+                
+                `the stars remember\nfive plus two in the dark night\necho stars shine bright`,
+                
+                `the sun remembers\none plus two plus two civic\necho civic now`,
+                
+                `summon the sun now\nthe light remembers the day\nthree plus four is bright`,
+                `call the sun now\nthe light remembers\nfive plus five`,
+                
+                `summon magic now\ncivic flows at dawn today\nbirds fly in the sky\n\ncall the magic now\nkayak glides on lake today\nripples in the blue`,
+                
+                `the stars remember\nfive plus two in the dark night\necho stars shine bright\n\nthe sum remember\none plus one in the bright sky\necho sum again\n\nif stars is greater than three\nthis is a haiku line\nthis is another line`,
+                
+                `count from one to three\nwords disappear one by one\nuntil none remain`,
+                
+                `the moon remembers\nfive plus two // assign value\necho softly now`,
+                
+                `this is not right\ntoo many syllables here\nerror will appear`
+              ];
+              
               const editor = document.getElementById('ku-haiku-editor');
               const output = document.getElementById('ku-haiku-output');
+              
               document.getElementById('ku-haiku-run').onclick = function() {
                 try {
                   output.textContent = runKuBrowser(editor.value);
@@ -1055,12 +1097,15 @@ Ku-Lang is just another one of those side quests ♨︎.
                   output.textContent = e.message;
                 }
               };
+              
               document.getElementById('ku-haiku-clear').onclick = function() {
                 editor.value = '';
                 output.textContent = 'Your poetic output will appear here!';
               };
+              
               document.getElementById('ku-haiku-example').onclick = function() {
-                editor.value = exampleHaiku;
+                const randomExample = haikuExamples[Math.floor(Math.random() * haikuExamples.length)];
+                editor.value = randomExample;
                 output.textContent = 'Your poetic output will appear here!';
               };
             </script>
@@ -1109,6 +1154,17 @@ Ku-Lang is just another one of those side quests ♨︎.
         </div>
     </main>
   </div>
+  
+  <style>
+    @keyframes bounce {
+      0% { left: 0px; transform: scaleX(-1); }
+      49% { transform: scaleX(-1); }
+      50% { left: calc(100% - 64px); transform: scaleX(1); }
+      99% { transform: scaleX(1); }
+      100% { left: 0px; transform: scaleX(-1); }
+    }
+  </style>
+  
   <script>
     // Feature dropdown functionality
     document.addEventListener('DOMContentLoaded', () => {
