@@ -49,145 +49,76 @@
 
 
 
-<div align="center">
-  <code style="text-align: center; display: block;">
-    Syllables are law,<br>
-    Palindromes unlock magic,<br>
-    Rhymes can twist the rules.<br><br>
-    
-    Summon what you wrote,<br>
-    Call it back in future lines—<br>
-    Haikus become code.<br><br>
-    
-    If-else, loops, and math,<br>
-    All disguised in poetry—<br>
-    Read, then feel it run.
-  </code>
-</div>
 </div>
 
  
 
-<p align="center">
-  <h1>Try it!!</h1>
-</p>
+<h1>Try it!!</h1>
 
-<p align="center">
-  <strong>Get ku-lang running in minutes on your machine!</strong>
-</p>
+<strong>Get ku-lang running in minutes on your machine!</strong>
 
-<p align="center">
-  <h2>Installation</h2>
-</p>
+<h2>Installation</h2>
 
-<p align="center">
-  <strong>◦ Option 1: Install globally (recommended)</strong>
-</p>
+<strong>◦ Option 1: Install globally (recommended)</strong>
 
-<div align="center">
-
-<code style="text-align: center; display: block;">
+```bash
 npm install -g ku-lang
-</code>
+```
 
-</div>
+<em>Note: On macOS/Linux, you may need to use <code>sudo npm install -g ku-lang</code> if you get permission errors.</em>
 
-<p align="center">
-  <em>Note: On macOS/Linux, you may need to use <code>sudo npm install -g ku-lang</code> if you get permission errors.</em>
-</p>
+<strong>◦ Option 2: Clone and install locally</strong>
 
-<p align="center">
-  <strong>◦ Option 2: Clone and install locally</strong>
-</p>
-
-<div align="center">
-
-<code style="text-align: center; display: block;">
-git clone https://github.com/NewSmoke38/ku-lang<br>
-cd ku-lang<br>
-npm install<br>
+```bash
+git clone https://github.com/NewSmoke38/ku-lang
+cd ku-lang
+npm install
 npm link
-</code>
+```
 
-</div>
+<em>Note: You might need <code>sudo npm link</code> on macOS/Linux if you get permission errors.</em>
 
-<p align="center">
-  <em>Note: You might need <code>sudo npm link</code> on macOS/Linux if you get permission errors.</em>
-</p>
+<h2>Your First Ku-Lang Program</h2>
 
-<p align="center">
-  <h2>Your First Ku-Lang Program</h2>
-</p>
+Create a file <code>hello.ku</code>:
 
-<p align="center">
-  Create a file <code>hello.ku</code>:
-</p>
-
-<div align="center">
-
-<code style="text-align: center; display: block;">
-value remembers<br>
-five plus five is the answer<br>
+```ku
+value remembers
+five plus five is the answer
 echo value now
-</code>
+```
 
-</div>
+Run it:
 
-<p align="center">
-  Run it:
-</p>
-
-<div align="center">
-
-<code style="text-align: center; display: block;">
+```shell
 ku hello.ku
-</code>
+```
 
-</div>
+<strong>Verify CLI installation:</strong>
 
-<p align="center">
-  <strong>Verify CLI installation:</strong>
-</p>
-
-<div align="center">
-
-<code style="text-align: center; display: block;">
-ku --version<br>
+```shell
+ku --version
 ku --help
-</code>
-
-</div>
+```
 
 
-<p align="center">
-  <h2><strong>⭐︎ What I Learned Building Ku-Lang</strong></h2>
-</p>
+<h2><strong>⭐︎ What I Learned Building Ku-Lang</strong></h2>
 
-<p align="center">
-  Creating ku-lang taught me that programming languages are more than just about writing the correct syntax. I learned how to make a rigid 5-7-5 haiku structure work, where every line must be both functional and beautiful. Now i understand what an interpreter really does, from syllable counting of haikus to palindrome detection and rhyme analysis (its really cool btw). i leanred how to publish my own CLI on npm,yaayy! Even lines left empty between code blocks are to be specified so that the code doesnt crash lol. also comment functionality is a thing which i never gave attention to!! It was a great journey!!!
-</p>
+Creating ku-lang taught me that programming languages are more than just about writing the correct syntax. I learned how to make a rigid 5-7-5 haiku structure work, where every line must be both functional and beautiful. Now i understand what an interpreter really does, from syllable counting of haikus to palindrome detection and rhyme analysis (its really cool btw). i leanred how to publish my own CLI on npm,yaayy! Even lines left empty between code blocks are to be specified so that the code doesnt crash lol. also comment functionality is a thing which i never gave attention to!! It was a great journey!!!
 
 <p>Read my notion Doc on how i made it! (coming soon)</p>
 
 
 
-<p align="center">
-  <h1>⛳︎ Contributing in Ku-Lang!</h1>
-</p>
+<h1>⛳︎ Contributing in Ku-Lang!</h1>
 
-<p align="center">
-  <strong>Contributions are welcomed to ku-lang!</strong>
-</p>
+<strong>Contributions are welcomed to ku-lang!</strong>
 
 
-<p align="center">
-  <strong>Hop onto the "Try it" section and run it on your machine! </strong>
-</p>
+<strong>Hop onto the "Try it" section and run it on your machine! </strong>
 
 
-<p align="center">
-  <em>Every contribution, no matter how small, helps make ku-lang more beautiful! 🌸</em>
-</p>
+<em>Every contribution, no matter how small, helps make ku-lang more beautiful! 🌸</em>
  
  ---
 
