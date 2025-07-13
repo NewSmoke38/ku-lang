@@ -19,16 +19,6 @@
 </p>
 
 
-<p align="center">
-  <div align="center">
-    <code style="text-align: center; display: block;">
-      Write code in haiku—<br>
-      Three lines with five-seven-five beats,<br>
-      It runs and responds.
-    </code>
-  </div>
-</p>
-
 
 <div align="center">
 
