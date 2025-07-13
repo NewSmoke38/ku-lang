@@ -110,7 +110,7 @@ function displayFusedHaiku(summonedHaiku, callingHaiku, outputLines) {
   outputLines.push(outputHaiku.join('\n'));
 }
 
-export function runKuBrowser(code) {
+function runKuBrowser(code) {
   const lines = code.split(/\r?\n/);
   const blocks = lines.reduce((acc, line) => {
     const trimmed = line.trim();
@@ -261,3 +261,5 @@ export function runKuBrowser(code) {
   }
   return outputLines.join('\n');
 }
+
+window.runKuBrowser = runKuBrowser;
