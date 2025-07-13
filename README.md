@@ -96,7 +96,7 @@ ku --help
 
 Creating ku-lang taught me that programming languages are more than just about writing the correct syntax. I learned how to make a rigid 5-7-5 haiku structure work, where every line must be both functional and beautiful. Now i understand what an interpreter really does, from syllable counting of haikus to palindrome detection and rhyme analysis (its really cool btw). i leanred how to publish my own CLI on npm,yaayy! Even lines left empty between code blocks are to be specified so that the code doesnt crash lol. also comment functionality is a thing which i never gave attention to!! It was a great journey!!!
 
-<p>Read my notion Doc on how i made it! (coming soon)</p>
+<p>📖 <a href="https://cypress-cayenne-00d.notion.site/Building-Ku-lang-Struggles-Decisions-and-Haikus-22f5118366ab80468cc3f88516f8dddf">Read my Notion Doc on how I made it!</a></p>
 
 
 
@@ -109,6 +109,13 @@ Creating ku-lang taught me that programming languages are more than just about w
 
 
 <em>Every contribution, no matter how small, helps make ku-lang more beautiful! 🌸</em>
+
+## 🔗 Links
+
+- **[GitHub](https://github.com/NewSmoke38/ku-lang)** - Source code and issues
+- **[Wiki](https://esolangs.org/wiki/Ku)** - Official esolang wiki entry
+- **[npm](https://www.npmjs.com/package/ku-lang?activeTab=readme)** - Package on npm registry
+- **[Lore](https://cypress-cayenne-00d.notion.site/Building-Ku-lang-Struggles-Decisions-and-Haikus-22f5118366ab80468cc3f88516f8dddf)** - Development journey and decisions
  
  ---
 
