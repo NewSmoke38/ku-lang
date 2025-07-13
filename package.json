@@ -1,6 +1,6 @@
 {
   "name": "ku-lang",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An esolang with syntax like haikus!!!",
   "main": "interpreter/ku.js",
   "bin": {
