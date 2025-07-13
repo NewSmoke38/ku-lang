@@ -25,7 +25,7 @@
 <h1>♨︎ What Makes Ku-Lang Special?</h1>
 
 <strong>Syllable Validation</strong>: Each line must follow strict 5-7-5 syllable counting<br><br>
-<strong>Variable Memory System</strong>: Store values using "remembers" and "echo" patterns<br><br>
+<strong>Variables/Operators</strong>: Store values using "remembers" and "echo" patterns<br><br>
 <strong>Natural Language Arithmetic</strong>: Perform math with English words (one plus five)<br><br>
 <strong>Conditional Execution</strong>: Use "if greater" to control program flow<br><br>
 <strong>Loop Constructs</strong>: "count from" creates iterative word consumption<br><br>
